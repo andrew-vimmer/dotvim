@@ -21,17 +21,17 @@ filetype plugin indent on
 
 " Enable spelling check by default.
 "
-autocmd BufNewFile,BufRead * set spell
+autocmd BufNew,BufNewFile,BufRead * set spell
 
 " Automatically set filetype for *.h files to C, since it defaults to CPP.
 "
-autocmd BufNew,BufRead *.h set filetype=c
+autocmd BufNew,BufNewFile,BufRead *.h set filetype=c
 
 " CtrlP plugin.
 "
 let g:ctrlp_map = '<C-p>'
 let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_working_path_mode = 'rwa'
 let g:ctrlp_switch_buffer = 0
 
 " neocomplete plugin.
