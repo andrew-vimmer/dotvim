@@ -165,6 +165,10 @@ nnoremap <ESC>q <C-w>q
 nnoremap <ESC>v <C-w>v
 nnoremap <ESC>s <C-w>s
 
+" File navigation.
+"
+nnoremap <ESC>o :A<CR> " Switches between header and source files, requires 'a.vim'
+
 " Automatically remove whitespace on save.
 "
 autocmd FileType c,python autocmd BufWritePre <buffer> :%s/\s\+$//e | :nohlsearch
