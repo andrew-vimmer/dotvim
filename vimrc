@@ -168,6 +168,7 @@ nnoremap <ESC>s <C-w>s
 " File navigation.
 "
 nnoremap <ESC>o :A<CR> " Switches between header and source files, requires 'a.vim'
+nnoremap <ESC>O :AV<CR> " Open source/header in a new vertical split, requires 'a.vim'
 
 " Automatically remove whitespace on save.
 "
