@@ -188,5 +188,6 @@ vmap < <gv
 vmap > >gv
 
 nnoremap <expr> gp '`['.strpart(getregtype(), 0, 1).'`]' " Visually select changed or pasted text.
+nmap p pgp
 
 nmap * *N
