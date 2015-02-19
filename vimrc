@@ -187,6 +187,6 @@ vmap y ygv<ESC>
 vmap < <gv
 vmap > >gv
 
-nnoremap gp '[v'] " Visually select changed or pasted text.
+nnoremap <expr> gp '`['.strpart(getregtype(), 0, 1).'`]' " Visually select changed or pasted text.
 
 nmap * *N
