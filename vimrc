@@ -19,10 +19,6 @@ let mapleader = ","
 syntax on
 filetype plugin indent on
 
-" Enable spelling check by default.
-"
-autocmd BufNew,BufNewFile,BufRead * set spell
-
 " Automatically set filetype for *.h files to C, since it defaults to CPP.
 "
 autocmd BufNew,BufNewFile,BufRead *.h set filetype=c
