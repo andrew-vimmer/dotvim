@@ -19,6 +19,10 @@ let mapleader = ","
 syntax on
 filetype plugin indent on
 
+" Spelling.
+"
+autocmd BufRead *.git/COMMIT_EDITMSG set spell
+
 " Automatically set filetype for *.h files to C, since it defaults to CPP.
 "
 autocmd BufNew,BufNewFile,BufRead *.h set filetype=c
