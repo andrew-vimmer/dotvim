@@ -61,10 +61,16 @@ let g:UltiSnipsSnippetDirectories = ["UltiSnips"]
 
 " EasyMotion plugin.
 "
+let g:EasyMotion_do_mapping = 0
+let g:EasyMotion_use_smartsign_us = 1
+let g:EasyMotion_off_screen_search = 0
+let g:EasyMotion_keys = "jfkdhglsienvowmcpqx,z/a;"
+
+
 nmap ? :nohlsearch<CR>
-nmap <Leader>/ <Plug>(easymotion-sn)
-omap <Leader>/ <Plug>(easymotion-tn)
-vmap <Leader>/ <Plug>(easymotion-tn)
+nmap <Space> <Plug>(easymotion-sn)
+omap <Space> <Plug>(easymotion-tn)
+vmap <Space> <Plug>(easymotion-tn)
 
 " vim-marching plugin.
 "
@@ -184,7 +190,7 @@ autocmd FileType python nnoremap <Leader><Leader>r :!python % |
 "
 set backspace=indent,start
 
-nmap * *N " Stay on the current match.
+nnoremap * *N " Stay on the current match.
 nnoremap <expr> gp '`['.strpart(getregtype(), 0, 1).'`]' " Visually select changed or pasted text.
 
 nnoremap M :m .+1<CR> " Move line under cursor downwards.
