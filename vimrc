@@ -22,6 +22,7 @@ filetype plugin indent on
 " Spelling.
 "
 autocmd BufRead *.git/COMMIT_EDITMSG set spell
+autocmd BufRead *hg-editor* set spell
 
 " Automatically set filetype for *.h files to C, since it defaults to CPP.
 "
