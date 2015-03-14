@@ -163,7 +163,6 @@ nnoremap <ESC>J <C-w>J
 nnoremap <ESC>H <C-w>H
 nnoremap <ESC>K <C-w>K
 nnoremap <ESC>L <C-w>L
-nnoremap <ESC>Q ZQ
 nnoremap <ESC>v <C-w>v
 nnoremap <ESC>s <C-w>s
 
