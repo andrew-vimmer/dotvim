@@ -173,8 +173,8 @@ autocmd FileType c,python autocmd BufWritePre <buffer> :%s/\s\+$//e | :nohlsearc
 
 " Python debugging.
 "
-autocmd FileType python nnoremap <Leader><Leader>d :!python -m pudb.run %<CR>
-autocmd FileType python nnoremap <Leader><Leader>r :!python %<CR>
+autocmd FileType python nnoremap <Leader><Leader>d :!python -m pudb.run % |
+autocmd FileType python nnoremap <Leader><Leader>r :!python % |
 
 " Editing.
 "
