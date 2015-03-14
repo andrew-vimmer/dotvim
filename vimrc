@@ -186,10 +186,13 @@ autocmd FileType python nnoremap <Leader><Leader>r :!python % |
 set backspace=indent,start
 
 vmap y ygv<ESC> " Retain selection after yanking.
+nmap * *N " Stay on the current match.
+nnoremap <expr> gp '`['.strpart(getregtype(), 0, 1).'`]' " Visually select changed or pasted text.
 
+nnoremap M :m .+1<CR> " Move line under cursor upwards.
+nnoremap K :m .-2<CR> " Move line under cursor downwards.
+nnoremap H << " Increase indentation level of the line under cursor.
+nnoremap L >> " Decrease indentation level of teh line under cursor.
 vmap < <gv
 vmap > >gv
 
-nnoremap <expr> gp '`['.strpart(getregtype(), 0, 1).'`]' " Visually select changed or pasted text.
-
-nmap * *N " Stay on the current match.
