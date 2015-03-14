@@ -185,10 +185,11 @@ autocmd FileType python nnoremap <Leader><Leader>r :!python % |
 "
 set backspace=indent,start
 
-vmap y ygv<ESC>
+vmap y ygv<ESC> " Retain selection after yanking.
+
 vmap < <gv
 vmap > >gv
 
 nnoremap <expr> gp '`['.strpart(getregtype(), 0, 1).'`]' " Visually select changed or pasted text.
 
-nmap * *N
+nmap * *N " Stay on the current match.
