@@ -191,7 +191,7 @@ autocmd FileType python nnoremap <Leader><Leader>r :!python % |
 "
 set backspace=indent,start
 
-nnoremap * *N " Stay on the current match.
+nnoremap * *N| " Stay on the current match.
 nnoremap <expr> gp '`['.strpart(getregtype(), 0, 1).'`]' " Visually select changed or pasted text.
 
 nnoremap M :m .+1<CR> " Move line under cursor downwards.
