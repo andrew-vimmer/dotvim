@@ -57,7 +57,7 @@ let g:EasyMotion_add_search_history = 0
 let g:EasyMotion_keys = "jfkdhglsienvowmcpqx,z/a;"
 
 
-nmap ? :nohlsearch<CR>
+nmap  :nohlsearch<CR>| " Map <C-/> to selection dehighlighting.
 nmap <Space> <Plug>(easymotion-sn)
 omap <Space> <Plug>(easymotion-tn)
 vmap <Space> <Plug>(easymotion-tn)
