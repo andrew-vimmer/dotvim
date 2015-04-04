@@ -39,20 +39,9 @@ let g:ctrlp_switch_buffer = 0
 "
 let g:neocomplete#enable_at_startup = 1
 
-" jedi-vim plugin.
-"
-autocmd FileType python setlocal omnifunc=jedi#completions
-
-let g:jedi#completions_enabled = 0
-let g:jedi#auto_vim_configuration = 0
-let g:jedi#use_tabs_not_buffers = 0
-let g:jedi#rename_command = "" 
-let g:jedi#show_call_signatures = 0
-
 if !exists('g:neocomplete#force_omni_input_patterns')
         let g:neocomplete#force_omni_input_patterns = {}
 endif
-let g:neocomplete#force_omni_input_patterns.python = '\%([^. \t]\.\|^\s*@\|^\s*from\s.\+import \|^\s*from \|^\s*import \)\w*'
 
 " UltiSnips plugin.
 "
