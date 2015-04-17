@@ -115,7 +115,7 @@ set smartcase
 
 " UI.
 "
-set mouse=nv
+set mouse=nv " Mouse is enabled in NORMAL and VISUAL modes.
 set nofoldenable " Never really found them useful anyway.
 set scrolloff=3 " Minimal number of screen lines visible above/below cursor.
 set splitright " Prefer vertical splits on the right.
