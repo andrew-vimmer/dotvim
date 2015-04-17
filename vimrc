@@ -179,6 +179,9 @@ autocmd FileType python nnoremap <Leader><Leader>r :!python % |
 " Editing.
 "
 set backspace=indent,start
+inoremap <CR> <C-g>u<CR>| " Break undo sequence on carriage return.
+inoremap <C-w> <C-g>u<C-w>| " Break undo sequence on delete backward word.
+inoremap <C-u> <C-g>u<C-u>| " Break undo sequence on delete backward line.
 
 nnoremap * *N| " Stay on the current match.
 nnoremap <expr> gp '`['.strpart(getregtype(), 0, 1).'`]' " Visually select changed or pasted text.
