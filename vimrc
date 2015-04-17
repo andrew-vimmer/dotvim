@@ -115,11 +115,13 @@ set smartcase
 
 " UI.
 "
-set wildmenu
-set nofoldenable " Never really found them useful anyway.
-set visualbell t_vb=
 set mouse=a
+set nofoldenable " Never really found them useful anyway.
+set scrolloff=3 " Minimal number of screen lines visible above/below cursor.
 set splitright " Prefer vertical splits on the right.
+set visualbell t_vb=
+set wildmenu
+
 autocmd VimResized * wincmd = " Automatically resize splits.
 
 " Statusline.
