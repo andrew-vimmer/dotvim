@@ -1,14 +1,28 @@
 
+" Enable plugins.
+"
+call plug#begin('~/.vim/bundle')
+
+Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
+Plug 'Shougo/neocomplete.vim'
+Plug 'scrooloose/syntastic'
+Plug 'SirVer/ultisnips'
+Plug 'altercation/vim-colors-solarized'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'osyo-manga/vim-marching'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'Shougo/vimproc.vim'
+Plug 'vim-scripts/a.vim'
+
+call plug#end()
+
 " Not using auto to suppress a SEGV while working on large files.
 set regexpengine=2
 
 " File encodings.
 "
 set fileencodings=ucs-bom,utf-8,default,cp1251,latin1
-
-" Enable Pathogen.
-"
-execute pathogen#infect()
 
 " Leader key mapping.
 "
