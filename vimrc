@@ -187,7 +187,7 @@ nnoremap <ESC>O :AV<CR> " Open source/header in a new vertical split, requires '
 
 " Automatically remove whitespace on save.
 "
-autocmd FileType c,python autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType c,python,dosbatch autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 
 " Python debugging.
