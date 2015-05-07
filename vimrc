@@ -163,6 +163,7 @@ nnoremap <ESC>p :tabprevious<CR>
 nnoremap <ESC>N :tabmove +1<CR>
 nnoremap <ESC>P :tabmove -1<CR>
 nnoremap <ESC>t :tabnew<CR>
+nnoremap <ESC>w :tabclose<CR>
 
 
 " Window navigation.
