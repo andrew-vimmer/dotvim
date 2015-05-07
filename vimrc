@@ -104,8 +104,6 @@ let g:syntastic_c_clang_check_post_args = ""
 "
 set incsearch
 set hlsearch
-set ignorecase
-set smartcase
 
 
 " UI.
