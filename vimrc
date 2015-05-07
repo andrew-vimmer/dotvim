@@ -205,6 +205,8 @@ set shiftwidth=4 " The number of spaces indentation stands for.
 
 " Editing.
 "
+nnoremap <Leader>s :w<CR>| " Simplified save functionality.
+
 set backspace=indent,start
 inoremap <CR> <C-g>u<CR>| " Break undo sequence on carriage return.
 inoremap <C-w> <C-g>u<C-w>| " Break undo sequence on delete backward word.
