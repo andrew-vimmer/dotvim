@@ -48,7 +48,6 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'rwa'
 let g:ctrlp_switch_buffer = 0
 
-
 " neocomplete plugin.
 "
 let g:neocomplete#enable_at_startup = 1
@@ -104,6 +103,8 @@ let g:syntastic_c_clang_check_post_args = ""
 "
 set incsearch
 set hlsearch
+set ignorecase
+set smartcase
 
 
 " UI.
