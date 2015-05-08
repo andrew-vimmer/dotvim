@@ -7,6 +7,18 @@ set regexpengine=2 " Not using auto to suppress a SEGV while working on large fi
 
 autocmd BufNew,BufNewFile,BufRead *.h set filetype=c| " Automatically set filetype for *.h files to C, since it defaults to CPP.
 
+" Common behaviour corrections.
+"
+let mapleader = "," " Leader key mapping.
+
+nnoremap ; :| " Simplified command prompt access in normal mode.
+vnoremap ; :| " Simplified command prompt access in normal mode.
+
+nnoremap s :update<CR>| " Simplified saving in normal mode.
+nnoremap S :update<CR>| " Simplified saving in normal mode (typo guard).
+vnoremap s <ESC>:update<CR>gv| " Simplified saving in visual mode.
+vnoremap S <ESC>:update<CR>gv| " Simplified saving in visual mode (typo guard).
+
 
 " Enable plugins.
 "
@@ -27,9 +39,6 @@ Plug 'ntpeters/vim-better-whitespace'
 
 call plug#end()
 
-" Leader key mapping.
-"
-let mapleader = ","
 
 " Syntax Highlighting and Indentation.
 "
@@ -209,8 +218,6 @@ set shiftwidth=4 " The number of spaces indentation stands for.
 
 " Editing.
 "
-nnoremap <Leader>s :w<CR>| " Simplified save functionality.
-
 set backspace=indent,start
 inoremap <CR> <C-g>u<CR>| " Break undo sequence on carriage return.
 inoremap <C-w> <C-g>u<C-w>| " Break undo sequence on delete backward word.
