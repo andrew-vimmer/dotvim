@@ -23,6 +23,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'Shougo/vimproc.vim'
 Plug 'vim-scripts/a.vim'
+Plug 'ntpeters/vim-better-whitespace'
 
 call plug#end()
 
@@ -189,7 +190,7 @@ nnoremap <ESC>O :AV<CR> " Open source/header in a new vertical split, requires '
 
 " Automatically remove whitespace on save.
 "
-autocmd FileType c,python,dosbatch autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType c,python autocmd BufWritePre <buffer> StripWhitespace
 
 
 " Python debugging.
