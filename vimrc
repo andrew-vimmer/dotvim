@@ -11,6 +11,8 @@ autocmd BufNew,BufNewFile,BufRead *.h set filetype=c| " Automatically set filety
 "
 let mapleader = "," " Leader key mapping.
 
+inoremap jj <ESC>| " Using rarely used character combo from home row to exit insert mode.
+
 nnoremap ; :| " Simplified command prompt access in normal mode.
 vnoremap ; :| " Simplified command prompt access in normal mode.
 
