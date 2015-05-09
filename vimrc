@@ -85,7 +85,6 @@ let g:EasyMotion_off_screen_search = 0
 let g:EasyMotion_add_search_history = 0
 let g:EasyMotion_keys = "jfkdhglsienvowmcpqx,z/a;"
 
-nmap  :nohlsearch<CR>| " Map <C-/> to selection dehighlighting.
 nmap <Space> <Plug>(easymotion-sn)
 omap <Space> <Plug>(easymotion-tn)
 vmap <Space> <Plug>(easymotion-tn)
@@ -107,10 +106,22 @@ let g:syntastic_warning_symbol = "*"
 let g:syntastic_style_error_symbol = "*"
 let g:syntastic_style_warning_symbol = "*"
 
+let g:syntastic_mode_map = {
+    \ "mode": "passive",
+    \ "active_filetypes": [],
+    \ "passive_filetypes": [] }
+
 let g:syntastic_c_checkers = ["clang_check"]
 let g_syntastic_python_checkers = ["python", "flake8"]
 
 let g:syntastic_c_clang_check_post_args = ""
+
+" Error checking with Syntastic.
+nnoremap <Leader>e :update<CR>:SyntasticCheck<CR>:Errors<CR>
+vnoremap <Leader>e <ESC>:update<CR>:SyntasticCheck<CR>:Errors<CR>gv
+" Common reset (highlighting and Syntastic errors).
+nnoremap <Leader>r :nohlsearch<CR>:SyntasticReset<CR>
+vnoremap <Leader>r <ESC>:nohlsearch<CR>:SyntasticReset<CR>gv
 
 
 " Searching.
