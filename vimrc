@@ -38,6 +38,7 @@ Plug 'tpope/vim-surround'
 Plug 'Shougo/vimproc.vim'
 Plug 'vim-scripts/a.vim'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'andrew-vimmer/c-snippets'
 
 call plug#end()
 
@@ -73,8 +74,8 @@ endif
 
 " UltiSnips plugin.
 "
-let g:UltiSnipsEditSplit = "horizontal"
-let g:UltiSnipsSnippetDirectories = ["UltiSnips"]
+let g:UltiSnipsEditSplit = 'horizontal'
+let g:UltiSnipsSnippetDirectories = ["UltiSnips", "."]
 
 
 " EasyMotion plugin.
