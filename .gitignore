@@ -1,3 +1,16 @@
-plugins
-spell
-.netrwhist
+
+# Directory change history.
+#
+/.netrwhist
+
+# Plugins directory.
+#
+/plugins
+
+# Custom dictionaries.
+#
+/spell
+
+# Snippets.
+#
+/UltiSnips
