@@ -5,6 +5,7 @@ set fileencodings=ucs-bom,utf-8,default,cp1251,latin1| " File encodings.
 set notimeout nottimeout| " Tune time out length in order to use <ESC> mapping for <M-...> combinations.
 set regexpengine=2 " Not using auto to suppress a SEGV while working on large files.
 
+autocmd CompleteDone * pclose| " Automatically close preview window when completion is done.
 autocmd BufNew,BufNewFile,BufRead *.h set filetype=c| " Automatically set filetype for *.h files to C, since it defaults to CPP.
 
 " Common behaviour corrections.
