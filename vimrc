@@ -40,6 +40,7 @@ Plug 'Shougo/vimproc.vim'
 Plug 'vim-scripts/a.vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'andrew-vimmer/c-snippets'
+Plug 'calmofthestorm/vim-indent-object'
 
 call plug#end()
 
