@@ -39,6 +39,7 @@ Plug 'vim-scripts/a.vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'andrew-vimmer/c-snippets'
 Plug 'calmofthestorm/vim-indent-object'
+Plug 'bronson/vim-visual-star-search'
 
 call plug#end()
 
