@@ -39,7 +39,6 @@ Plug 'vim-scripts/a.vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'andrew-vimmer/c-snippets'
 Plug 'calmofthestorm/vim-indent-object'
-Plug 'bronson/vim-visual-star-search'
 
 call plug#end()
 
@@ -132,6 +131,26 @@ set incsearch
 set hlsearch
 set ignorecase
 set smartcase
+
+" Yank selected text to the '@/' register and escape newline characters and
+" specified substrings.
+function! YankSelectedAndEscape(cmdtype)
+
+    let temp = @"
+
+    normal! gvy
+
+    let @" = escape(@", a:cmdtype.'\*')
+    let @/ = substitute(@", '\n', '\\n', 'g')
+
+    let @" = temp
+
+endfunction
+
+xnoremap * :<C-u>call YankSelectedAndEscape('/')<CR>/<C-R>=@/<CR><CR>Ngv<ESC>| " Forward search visually selected text using '*' command.
+xnoremap # :<C-u>call YankSelectedAndEscape('?')<CR>?<C-R>=@/<CR><CR>ngv<ESC>| " Backward search visually selected text using '#' command.
+
+nnoremap * *N| " Stay on the current match.
 
 
 " UI.
@@ -241,7 +260,6 @@ inoremap <C-u> <C-g>u<C-u>| " Break undo sequence on delete backward line.
 
 nmap Y y$| " Yank to the end of a line instead of being a 'yy' alias.
 vmap y ygv<ESC>| " Retain cursor position when yanking from visual mode.
-nnoremap * *N| " Stay on the current match.
 nnoremap <expr> gp '`['.strpart(getregtype(), 0, 1).'`]' " Visually select changed or pasted text.
 
 nnoremap M :m .+1<CR>| " Move line under cursor downwards.
