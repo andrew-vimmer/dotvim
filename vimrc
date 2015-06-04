@@ -238,6 +238,7 @@ inoremap <C-w> <C-g>u<C-w>| " Break undo sequence on delete backward word.
 inoremap <C-u> <C-g>u<C-u>| " Break undo sequence on delete backward line.
 
 nmap Y y$| " Yank to the end of a line instead of being a 'yy' alias.
+vmap y ygv<ESC>| " Retain cursor position when yanking from visual mode.
 nnoremap * *N| " Stay on the current match.
 nnoremap <expr> gp '`['.strpart(getregtype(), 0, 1).'`]' " Visually select changed or pasted text.
 
