@@ -149,8 +149,8 @@ function! YankSelectedAndEscape(cmdtype)
 
 endfunction
 
-xnoremap * :<C-u>call YankSelectedAndEscape('/')<CR>/<C-R>=@/<CR><CR>Ngv<ESC>| " Forward search visually selected text using '*' command.
-xnoremap # :<C-u>call YankSelectedAndEscape('?')<CR>?<C-R>=@/<CR><CR>ngv<ESC>| " Backward search visually selected text using '#' command.
+xnoremap * :<C-u>call YankSelectedAndEscape('/')<CR>/<C-R>=@/<CR><CR>N| " Forward search visually selected text using '*' command.
+xnoremap # :<C-u>call YankSelectedAndEscape('?')<CR>?<C-R>=@/<CR><CR>n| " Backward search visually selected text using '#' command.
 
 nnoremap * *N| " Stay on the current match.
 
