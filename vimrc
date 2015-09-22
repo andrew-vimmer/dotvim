@@ -170,7 +170,7 @@ autocmd VimResized * wincmd = " Automatically resize splits.
 " Color scheme.
 "
 set background=dark
-" colorscheme solarized
+colorscheme slate
 
 " highlight SpellBad cterm=bold,undercurl ctermfg=9
 " highlight SpellCap cterm=bold,undercurl ctermfg=3
