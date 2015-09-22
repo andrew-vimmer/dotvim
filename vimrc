@@ -188,7 +188,7 @@ set colorcolumn=80
 
 " Statusline.
 "
-highlight User1 cterm=reverse,bold ctermfg=3
+highlight User1 cterm=reverse,bold
 highlight User2 cterm=reverse,bold
 
 set statusline=%1*%m%*\ %f,\ %{&fenc!=''?&fenc:&enc}%{&bomb?'\+BOM':''}\,\ %{&ff}\ %r%h%w%=%2*%l%*/%L\,\ %2*%v%*\ "
