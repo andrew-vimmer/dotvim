@@ -181,12 +181,12 @@ colorscheme slate
 " highlight StatusLineNC cterm=NONE
 
 
-" Guidelines.
+" Guide lines.
 "
 set colorcolumn=80
 
 
-" Statusline.
+" Status line.
 "
 highlight User1 cterm=reverse,bold
 highlight User2 cterm=reverse,bold
