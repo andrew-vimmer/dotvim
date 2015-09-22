@@ -29,7 +29,6 @@ Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
 Plug 'Shougo/neocomplete.vim'
 Plug 'scrooloose/syntastic', { 'for': ['c', 'cpp', 'python'] }
 Plug 'SirVer/ultisnips'
-" Plug 'altercation/vim-colors-solarized'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'osyo-manga/vim-marching', { 'for': ['c', 'cpp'] }
 Plug 'tpope/vim-repeat'
@@ -172,13 +171,12 @@ autocmd VimResized * wincmd = " Automatically resize splits.
 set background=dark
 colorscheme slate
 
-" highlight SpellBad cterm=bold,undercurl ctermfg=9
-" highlight SpellCap cterm=bold,undercurl ctermfg=3
-" highlight SyntasticWarningSign cterm=bold ctermfg=3
-" highlight SignColumn ctermbg=0
-" highlight VertSplit ctermbg=0 ctermfg=0
-" highlight NonText ctermbg=0 ctermfg=0
-" highlight StatusLineNC cterm=NONE
+highlight SpellCap cterm=bold,undercurl ctermfg=3
+highlight SyntasticWarningSign cterm=bold ctermfg=3
+highlight SignColumn ctermbg=0
+highlight VertSplit ctermbg=0 ctermfg=0
+highlight NonText ctermbg=0 ctermfg=0
+highlight StatusLineNC cterm=NONE
 
 
 " Guide lines.
