@@ -183,7 +183,7 @@ colorscheme slate
 
 " Guidelines.
 "
-set colorcolumn=80,81,82,83,84,85
+set colorcolumn=80
 
 
 " Statusline.
