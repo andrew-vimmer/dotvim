@@ -193,14 +193,6 @@ set statusline=%1*%m%*\ %f,\ %{&fenc!=''?&fenc:&enc}%{&bomb?'\+BOM':''}\,\ %{&ff
 set laststatus=2 " Show always.
 
 
-" Enable mode-dependent cursor in mintty.
-"
-let &t_ti.="\e[1 q"
-let &t_SI.="\e[5 q"
-let &t_EI.="\e[1 q"
-let &t_te.="\e[0 q"
-
-
 " Tab navigation.
 "
 nnoremap <ESC>n :tabnext<CR>
