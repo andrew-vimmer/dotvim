@@ -255,11 +255,12 @@ nmap Y y$| " Yank to the end of a line instead of being a 'yy' alias.
 vmap y ygv<ESC>| " Retain cursor position when yanking from visual mode.
 nnoremap <expr> gp '`['.strpart(getregtype(), 0, 1).'`]' " Visually select changed or pasted text.
 
-nnoremap M :m .+1<CR>| " Move line under cursor downwards.
+nnoremap M J| " Remap join to 'M' for Merge.
+nnoremap J :m .+1<CR>| " Move line under cursor downwards.
 nnoremap H <<| " Increase indentation level of the line under cursor.
 nnoremap K :m .-2<CR>| " Move line under cursor upwards.
 nnoremap L >>| " Decrease indentation level of teh line under cursor.
-vnoremap M :m '>+1<CR>gv| " Move selected lines downwards and retain selection.
+vnoremap J :m '>+1<CR>gv| " Move selected lines downwards and retain selection.
 vnoremap H <gv| " Decrease indentation level of selected lines and retain selection.
 vnoremap K :m '<-2<CR>gv| " Move selected lines upwards and retain selection.
 vnoremap L >gv| " Increase indentation level of selected lines and retain selection.
