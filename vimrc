@@ -59,7 +59,7 @@ autocmd BufRead *hg-editor* set spell
 "
 let g:ctrlp_map = '<C-p>'
 let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'rwa'
+let g:ctrlp_working_path_mode = 'w'
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_custom_ignore = '\v(\.(git|hg|build))|build$'
 
