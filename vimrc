@@ -30,10 +30,8 @@ Plug 'Shougo/neocomplete.vim'
 Plug 'scrooloose/syntastic', { 'for': ['c', 'cpp', 'python'] }
 Plug 'SirVer/ultisnips'
 Plug 'Lokaltog/vim-easymotion'
-Plug 'osyo-manga/vim-marching', { 'for': ['c', 'cpp'] }
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-Plug 'Shougo/vimproc.vim'
 Plug 'vim-scripts/a.vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'andrew-vimmer/c-snippets'
@@ -93,13 +91,6 @@ let g:EasyMotion_use_smartsign_us = 1
 nmap <Space> <Plug>(easymotion-sn)
 omap <Space> <Plug>(easymotion-tn)
 vmap <Space> <Plug>(easymotion-tn)
-
-
-" vim-marching plugin.
-"
-let g:marching_enable_neocomplete = 1
-let g:neocomplete#force_omni_input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
-let g:neocomplete#force_omni_input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)\%(\h\w*\)\?'
 
 
 " Syntastic plugin.
