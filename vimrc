@@ -37,7 +37,6 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'andrew-vimmer/c-snippets'
 Plug 'calmofthestorm/vim-indent-object'
 Plug 'rking/ag.vim'
-Plug 'mattn/emmet-vim'
 
 call plug#end()
 
