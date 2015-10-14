@@ -16,9 +16,7 @@ nnoremap ; :| " Simplified command prompt access in normal mode.
 vnoremap ; :| " Simplified command prompt access in visual mode.
 
 nnoremap s :update<CR>| " Simplified saving in normal mode.
-nnoremap S :update<CR>| " Simplified saving in normal mode (typo guard).
 vnoremap s <ESC>:update<CR>gv| " Simplified saving in visual mode.
-vnoremap S <ESC>:update<CR>gv| " Simplified saving in visual mode (typo guard).
 
 
 " Enable plugins.
