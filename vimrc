@@ -120,11 +120,11 @@ let g_syntastic_python_checkers = ["python", "flake8"]
 let g:syntastic_c_clang_check_post_args = ""
 
 " Error checking with Syntastic.
-nnoremap <Leader>e :update<CR>:SyntasticCheck<CR>:Errors<CR>
-vnoremap <Leader>e <ESC>:update<CR>:SyntasticCheck<CR>:Errors<CR>gv
+nnoremap <Leader>e :update<CR>:silent! SyntasticCheck<CR>:silent! Errors<CR>
+vnoremap <Leader>e <ESC>:update<CR>:silent! SyntasticCheck<CR>:silent! Errors<CR>gv
 " Common reset (highlighting and Syntastic errors).
-nnoremap <Leader>r :nohlsearch<CR>:SyntasticReset<CR>
-vnoremap <Leader>r <ESC>:nohlsearch<CR>:SyntasticReset<CR>gv
+nnoremap <Leader>r :nohlsearch<CR>:silent! SyntasticReset<CR>
+vnoremap <Leader>r <ESC>:nohlsearch<CR>:silent! SyntasticReset<CR>gv
 
 
 " Searching.
