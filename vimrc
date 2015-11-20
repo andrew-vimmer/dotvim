@@ -1,22 +1,32 @@
 
 " Technical behaviour corrections.
 "
-set fileencodings=ucs-bom,utf-8,default,cp1251,latin1| " File encodings.
-set notimeout nottimeout| " Tune time out length in order to use <ESC> mapping for <M-...> combinations.
-set regexpengine=2 " Not using auto to suppress a SEGV while working on large files.
+" File encodings.
+set fileencodings=ucs-bom,utf-8,default,cp1251,latin1
+" Tune time out length in order to use <ESC> mapping for <M-...> combinations.
+set notimeout nottimeout
+" Not using auto to suppress a SEGV while working on large files.
+set regexpengine=2
 
-autocmd CompleteDone * pclose| " Automatically close preview window when completion is done.
-autocmd BufNew,BufNewFile,BufRead *.h set filetype=c| " Automatically set filetype for *.h files to C, since it defaults to CPP.
+" Automatically close preview window when completion is done.
+autocmd CompleteDone * pclose
+" Automatically set file type for *.h files to C, since it defaults to CPP.
+autocmd BufNew,BufNewFile,BufRead *.h set filetype=c
 
 " Common behaviour corrections.
 "
-let mapleader = "," " Leader key mapping.
+" Leader key mapping.
+let mapleader = ","
 
-nnoremap ; :| " Simplified command prompt access in normal mode.
-vnoremap ; :| " Simplified command prompt access in visual mode.
+" Simplified command prompt access in normal mode.
+nnoremap ; :
+" Simplified command prompt access in visual mode.
+vnoremap ; :
 
-nnoremap s :update<CR>| " Simplified saving in normal mode.
-vnoremap s <ESC>:update<CR>gv| " Simplified saving in visual mode.
+" Simplified saving in normal mode.
+nnoremap s :update<CR>
+" Simplified saving in visual mode.
+vnoremap s <ESC>:update<CR>gv
 
 
 " Enable plugins.
@@ -139,21 +149,28 @@ function! YankSelectedAndEscape(cmdtype)
 
 endfunction
 
-xnoremap * :<C-u>call YankSelectedAndEscape('/')<CR>/<C-R>=@/<CR><CR>N| " Forward search visually selected text using '*' command.
-xnoremap # :<C-u>call YankSelectedAndEscape('?')<CR>?<C-R>=@/<CR><CR>n| " Backward search visually selected text using '#' command.
+" Forward search visually selected text using '*' command.
+xnoremap * :<C-u>call YankSelectedAndEscape('/')<CR>/<C-R>=@/<CR><CR>N
+" Backward search visually selected text using '#' command.
+xnoremap # :<C-u>call YankSelectedAndEscape('?')<CR>?<C-R>=@/<CR><CR>n
 
-nnoremap * *N| " Stay on the current match.
+" Stay on current match.
+nnoremap * *N
 
 
 " UI.
 "
-set nofoldenable " Never really found them useful anyway.
-set scrolloff=3 " Minimal number of screen lines visible above/below cursor.
-set splitright " Prefer vertical splits on the right.
+" Never really found them useful anyway.
+set nofoldenable
+" Minimal number of screen lines visible above/below cursor.
+set scrolloff=3
+" Prefer vertical splits on the right.
+set splitright
 set visualbell t_vb=
 set wildmenu
 
-autocmd VimResized * wincmd = " Automatically resize splits.
+" Automatically resize splits.
+autocmd VimResized * wincmd =
 
 
 " Color scheme.
@@ -180,7 +197,8 @@ highlight User1 cterm=reverse,bold
 highlight User2 cterm=reverse,bold
 
 set statusline=%1*%m%*\ %f,\ %{&fenc!=''?&fenc:&enc}%{&bomb?'\+BOM':''}\,\ %{&ff}\ %r%h%w%=%2*%l%*/%L\,\ %2*%v%*\ "
-set laststatus=2 " Show always.
+" Show always.
+set laststatus=2
 
 
 " Tab navigation.
@@ -209,8 +227,10 @@ nnoremap <ESC>s <C-w>s
 
 " File navigation.
 "
-nnoremap <ESC>o :A<CR> " Switches between header and source files, requires 'a.vim'.
-nnoremap <ESC>O :AV<CR> " Open source/header in a new vertical split, requires 'a.vim'.
+" Switches between header and source files, requires 'a.vim'.
+nnoremap <ESC>o :A<CR>
+" Open source/header in a new vertical split, requires 'a.vim'.
+nnoremap <ESC>O :AV<CR>
 
 
 " Automatically remove whitespace on save.
@@ -226,29 +246,48 @@ autocmd FileType python nnoremap <Leader><Leader>r :!python % |
 
 " Spaces and Tabs.
 "
-set tabstop=4 " <TAB> characters will be viewed as this number of spaces.
-set expandtab " <TAB> press will produce spaces instead of actual tabs.
-set softtabstop=4 " <TAB> press will produces this number of spaces.
-set shiftwidth=4 " The number of spaces indentation stands for.
+" <TAB> characters will be shown as this number of spaces.
+set tabstop=4
+" <TAB> press will produce spaces instead of actual tabs.
+set expandtab
+" <TAB> press will produces this number of spaces.
+set softtabstop=4
+" The number of spaces indentation stands for.
+set shiftwidth=4
 
 
 " Editing.
 "
 set backspace=indent,start
-inoremap <CR> <C-g>u<CR>| " Break undo sequence on carriage return.
-inoremap <C-w> <C-g>u<C-w>| " Break undo sequence on delete backward word.
-inoremap <C-u> <C-g>u<C-u>| " Break undo sequence on delete backward line.
+" Break undo sequence on carriage return.
+inoremap <CR> <C-g>u<CR>
+" Break undo sequence on delete backward word.
+inoremap <C-w> <C-g>u<C-w>
+" Break undo sequence on delete backward line.
+inoremap <C-u> <C-g>u<C-u>
 
-nmap Y y$| " Yank to the end of a line instead of being a 'yy' alias.
-vmap y ygv<ESC>| " Retain cursor position when yanking from visual mode.
-nnoremap <expr> gp '`['.strpart(getregtype(), 0, 1).'`]' " Visually select changed or pasted text.
+" Yank to the end of a line instead of being a 'yy' alias.
+nmap Y y$
+" Retain cursor position when yanking from visual mode.
+vmap y ygv<ESC>
+" Visually select changed or pasted text.
+nnoremap <expr> gp '`['.strpart(getregtype(), 0, 1).'`]'
 
-nnoremap M J| " Remap join to 'M' for Merge.
-nnoremap J :m .+1<CR>| " Move line under cursor downwards.
-nnoremap H <<| " Increase indentation level of the line under cursor.
-nnoremap K :m .-2<CR>| " Move line under cursor upwards.
-nnoremap L >>| " Decrease indentation level of teh line under cursor.
-vnoremap J :m '>+1<CR>gv| " Move selected lines downwards and retain selection.
-vnoremap H <gv| " Decrease indentation level of selected lines and retain selection.
-vnoremap K :m '<-2<CR>gv| " Move selected lines upwards and retain selection.
-vnoremap L >gv| " Increase indentation level of selected lines and retain selection.
+" Remap join to 'M' for Merge.
+nnoremap M J
+" Move line under cursor downwards.
+nnoremap J :m .+1<CR>
+" Increase indentation level of the line under cursor.
+nnoremap H <<
+" Move line under cursor upwards.
+nnoremap K :m .-2<CR>
+" Decrease indentation level of the line under cursor.
+nnoremap L >>
+" Move selected lines downwards and retain selection.
+vnoremap J :m '>+1<CR>gv
+" Decrease indentation level of selected lines and retain selection.
+vnoremap H <gv
+" Move selected lines upwards and retain selection.
+vnoremap K :m '<-2<CR>gv
+" Increase indentation level of selected lines and retain selection.
+vnoremap L >gv
