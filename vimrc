@@ -56,8 +56,12 @@ filetype plugin indent on
 
 " Spelling.
 "
+" Git commit messages.
 autocmd BufRead *.git/COMMIT_EDITMSG set spell
+" Mercurial commit messages.
 autocmd BufRead *hg-editor* set spell
+" Perforce commit messages.
+autocmd BufRead /tmp/tmp.*.* set spell
 
 
 " CtrlP plugin.
