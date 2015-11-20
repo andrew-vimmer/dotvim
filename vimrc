@@ -9,7 +9,7 @@ set notimeout nottimeout
 set regexpengine=2
 
 " Automatically close preview window when completion is done.
-autocmd CompleteDone * pclose
+autocmd CompleteDone * silent! pclose
 " Automatically set file type for *.h files to C, since it defaults to CPP.
 autocmd BufNew,BufNewFile,BufRead *.h set filetype=c
 
