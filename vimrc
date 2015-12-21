@@ -40,7 +40,6 @@ Plug 'SirVer/ultisnips'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-Plug 'vim-scripts/a.vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'andrew-vimmer/c-snippets'
 Plug 'calmofthestorm/vim-indent-object'
@@ -227,14 +226,6 @@ nnoremap <ESC>K <C-w>K
 nnoremap <ESC>L <C-w>L
 nnoremap <ESC>v <C-w>v
 nnoremap <ESC>s <C-w>s
-
-
-" File navigation.
-"
-" Switches between header and source files, requires 'a.vim'.
-nnoremap <ESC>o :A<CR>
-" Open source/header in a new vertical split, requires 'a.vim'.
-nnoremap <ESC>O :AV<CR>
 
 
 " Automatically remove whitespace on save.
