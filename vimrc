@@ -93,7 +93,7 @@ let g:ctrlp_working_path_mode = 'w'
 let g:neocomplete#enable_at_startup = 1
 
 if !exists('g:neocomplete#force_omni_input_patterns')
-        let g:neocomplete#force_omni_input_patterns = {}
+    let g:neocomplete#force_omni_input_patterns = {}
 endif
 
 
@@ -154,23 +154,20 @@ set smartcase
 
 " Yank selected text to the '@/' register and escape newline characters and
 " specified substrings.
-function! YankSelectedAndEscape(cmdtype)
-
+function! YankSelected(cmdtype)
     let temp = @"
 
     normal! gvy
 
     let @" = escape(@", a:cmdtype.'\*')
     let @/ = substitute(@", '\n', '\\n', 'g')
-
     let @" = temp
-
 endfunction
 
 " Forward search visually selected text using '*' command.
-xnoremap * :<C-u>call YankSelectedAndEscape('/')<CR>/<C-R>=@/<CR><CR>N
+xnoremap * :<C-u>call YankSelected('/')<CR>/<C-R>=@/<CR><CR>N
 " Backward search visually selected text using '#' command.
-xnoremap # :<C-u>call YankSelectedAndEscape('?')<CR>?<C-R>=@/<CR><CR>n
+xnoremap # :<C-u>call YankSelected('?')<CR>?<C-R>=@/<CR><CR>n
 
 " Stay on current match.
 nnoremap * *N
