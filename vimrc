@@ -43,7 +43,7 @@ Plug 'embear/vim-localvimrc'
 Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'rking/ag.vim'
-Plug 'scrooloose/syntastic', { 'for': ['c', 'cpp', 'python'] }
+Plug 'scrooloose/syntastic', {'for': ['c', 'cpp', 'python']}
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 
@@ -69,13 +69,13 @@ autocmd BufRead /tmp/tmp.*.* set spell
 "
 " NOTE:
 "   The configuration makes all local configuration files be loaded without
-"   asking and being sandboxed. The reason for such behaviour is that there are
-"   plenty ways to achieve persistence on the system, so I find default
+"   asking or being sandboxed. The reason for such behaviour is that there are
+"   plenty of ways to achieve persistence on the system, so I find default
 "   settings redundant. If you'd like to debug issues arising from local
 "   configuration files, revert these to default or use the
 "   `g:localvimrc_debug` instead.
 let g:localvimrc_ask = 0
-let g:localvimrc_name = [ ".vimrc" ]
+let g:localvimrc_name = ['.vimrc']
 let g:localvimrc_sandbox = 0
 
 
@@ -101,7 +101,7 @@ endif
 " UltiSnips plugin.
 "
 let g:UltiSnipsEditSplit = 'horizontal'
-let g:UltiSnipsSnippetDirectories = ["UltiSnips", "."]
+let g:UltiSnipsSnippetDirectories = ['UltiSnips', '.']
 
 
 " EasyMotion plugin.
@@ -133,8 +133,8 @@ let g:syntastic_mode_map = {
     \ "active_filetypes": [],
     \ "passive_filetypes": [] }
 
-let g:syntastic_c_checkers = ["clang_check"]
-let g_syntastic_python_checkers = ["python", "flake8"]
+let g:syntastic_c_checkers = ['clang_check']
+let g_syntastic_python_checkers = ['python', 'flake8']
 
 let g:syntastic_c_clang_check_post_args = ""
 
