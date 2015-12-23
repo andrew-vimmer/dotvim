@@ -44,6 +44,7 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'andrew-vimmer/c-snippets'
 Plug 'calmofthestorm/vim-indent-object'
 Plug 'rking/ag.vim'
+Plug 'embear/vim-localvimrc'
 
 call plug#end()
 
@@ -61,6 +62,20 @@ autocmd BufRead *.git/COMMIT_EDITMSG set spell
 autocmd BufRead *hg-editor* set spell
 " Perforce commit messages.
 autocmd BufRead /tmp/tmp.*.* set spell
+
+
+" vim-localvimrc plugin.
+"
+" NOTE:
+"   The configuration makes all local configuration files be loaded without
+"   asking and being sandboxed. The reason for such behaviour is that there are
+"   plenty of ways to achieve persistence on the system, so I find default
+"   settings redundant. If you'd like to debug issues arising from local
+"   configuration files, revert these to default or use the
+"   `g:localvimrc_debug` instead.
+let g:localvimrc_ask = 0
+let g:localvimrc_name = [ ".vimrc" ]
+let g:localvimrc_sandbox = 0
 
 
 " CtrlP plugin.
