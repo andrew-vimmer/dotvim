@@ -33,18 +33,19 @@ vnoremap s <ESC>:update<CR>gv
 "
 call plug#begin('~/.vim/plugins')
 
-Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
-Plug 'Shougo/neocomplete.vim'
-Plug 'scrooloose/syntastic', { 'for': ['c', 'cpp', 'python'] }
-Plug 'SirVer/ultisnips'
 Plug 'Lokaltog/vim-easymotion'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-surround'
-Plug 'ntpeters/vim-better-whitespace'
+Plug 'Shougo/neocomplete.vim'
+Plug 'SirVer/ultisnips'
+Plug 'altercation/vim-colors-solarized'
 Plug 'andrew-vimmer/c-snippets'
 Plug 'calmofthestorm/vim-indent-object'
-Plug 'rking/ag.vim'
 Plug 'embear/vim-localvimrc'
+Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'rking/ag.vim'
+Plug 'scrooloose/syntastic', { 'for': ['c', 'cpp', 'python'] }
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
@@ -193,7 +194,7 @@ autocmd VimResized * wincmd =
 " Color scheme.
 "
 set background=dark
-colorscheme slate
+colorscheme solarized
 
 highlight SpellCap cterm=bold,undercurl ctermfg=3
 highlight SyntasticWarningSign cterm=bold ctermfg=3
