@@ -175,6 +175,8 @@ nnoremap * *N
 
 " UI.
 "
+" Guide lines.
+set colorcolumn=80
 " Never really found them useful anyway.
 set nofoldenable
 " Minimal number of screen lines visible above/below cursor.
@@ -199,11 +201,6 @@ highlight SignColumn ctermbg=0
 highlight VertSplit ctermbg=0 ctermfg=0
 highlight NonText ctermbg=0 ctermfg=0
 highlight StatusLineNC cterm=NONE
-
-
-" Guide lines.
-"
-set colorcolumn=80
 
 
 " Status line.
