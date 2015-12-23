@@ -196,13 +196,6 @@ autocmd VimResized * wincmd =
 set background=dark
 colorscheme solarized
 
-highlight SpellCap cterm=bold,undercurl ctermfg=3
-highlight SyntasticWarningSign cterm=bold ctermfg=3
-highlight SignColumn ctermbg=0
-highlight VertSplit ctermbg=0 ctermfg=0
-highlight NonText ctermbg=0 ctermfg=0
-highlight StatusLineNC cterm=NONE
-
 
 " Status line.
 "
