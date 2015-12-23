@@ -208,10 +208,7 @@ set colorcolumn=80
 
 " Status line.
 "
-highlight User1 cterm=reverse,bold
-highlight User2 cterm=reverse,bold
-
-set statusline=%1*%m%w%h%r%*\ %f,\ %{&fenc!=''?&fenc:&enc}%{&bomb?'\+BOM':''}\,\ %{&ff}\ %=%2*%l%*/%L\,\ %2*%v%*\ "
+set statusline=%m%w%h%r\ %f,\ %{&fenc!=''?&fenc:&enc}%{&bomb?'\+BOM':''}\,\ %{&ff}\ %=%l/%L\,\ %v\ "
 " Show always.
 set laststatus=2
 
