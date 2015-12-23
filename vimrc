@@ -176,25 +176,23 @@ nnoremap * *N
 
 " UI.
 "
+set background=dark
 " Guide lines.
 set colorcolumn=80
+" Color scheme.
+colorscheme solarized
 " Never really found them useful anyway.
 set nofoldenable
 " Minimal number of screen lines visible above/below cursor.
 set scrolloff=3
 " Prefer vertical splits on the right.
 set splitright
+" Disable screen flickering on bell character.
 set visualbell t_vb=
 set wildmenu
 
 " Automatically resize splits.
 autocmd VimResized * wincmd =
-
-
-" Color scheme.
-"
-set background=dark
-colorscheme solarized
 
 
 " Status line.
