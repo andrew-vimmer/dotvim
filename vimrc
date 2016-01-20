@@ -197,7 +197,7 @@ autocmd VimResized * wincmd =
 
 " Status line.
 "
-set statusline=%m%w%h%r\ %f,\ %{&fenc!=''?&fenc:&enc}%{&bomb?'\+BOM':''}\,\ %{&ff}\ %=%l/%L\,\ %v\ "
+set statusline=%m%w%h%r\ %f\ %{&fenc!=''?&fenc:&enc}%{&bomb?'\+BOM':''}\,\ %{&ff}\ %=%l/%L\,\ %v\ "
 " Show always.
 set laststatus=2
 
