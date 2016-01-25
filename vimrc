@@ -93,6 +93,8 @@ if executable('ag')
     let g:ctrlp_user_command = 'ag -l --nocolor -g "" %s'
 endif
 
+nnoremap <C-K> :CtrlPTag<CR>
+
 
 " neocomplete plugin.
 "
