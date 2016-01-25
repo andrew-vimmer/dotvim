@@ -88,6 +88,11 @@ let g:ctrlp_max_files = 0
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = 'w'
 
+if executable('ag')
+    let g:ctrlp_use_caching = 0
+    let g:ctrlp_user_command = 'ag -l --nocolor -g "" %s'
+endif
+
 
 " neocomplete plugin.
 "
