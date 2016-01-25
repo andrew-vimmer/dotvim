@@ -146,6 +146,13 @@ nnoremap <Leader>r :nohlsearch<CR>:silent! SyntasticReset<CR>
 vnoremap <Leader>r <ESC>:nohlsearch<CR>:silent! SyntasticReset<CR>gv
 
 
+" Ag.vim plugin.
+"
+let g:ag_highlight = 1
+
+nnoremap <Leader>s :Ag! |
+nnoremap <Leader>S :AgBuffer! --smart-case |
+
 " Searching.
 "
 set incsearch
@@ -153,8 +160,6 @@ set hlsearch
 set ignorecase
 set smartcase
 
-" Search using `ag-vim` in normal mode.
-nnoremap <Leader>f :Ag! |
 
 " Yank selected text to the '@/' register and escape newline characters and
 " specified substrings.
