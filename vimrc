@@ -153,6 +153,9 @@ set hlsearch
 set ignorecase
 set smartcase
 
+" Search using `ag-vim` in normal mode.
+nnoremap <Leader>f :Ag! |
+
 " Yank selected text to the '@/' register and escape newline characters and
 " specified substrings.
 function! YankSelected(cmdtype)
