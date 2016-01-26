@@ -92,8 +92,6 @@ if executable('ag')
     let g:ctrlp_user_command = 'ag -l --nocolor -g "" %s'
 endif
 
-nnoremap <C-K> :CtrlPBufTagAll<CR>
-
 
 " neocomplete plugin.
 "
@@ -157,7 +155,6 @@ vnoremap <Leader>r <ESC>:nohlsearch<CR>:silent! SyntasticReset<CR>gv
 let g:ag_highlight = 1
 
 nnoremap <Leader>s :Ag! |
-nnoremap <Leader>S :AgBuffer! --smart-case |
 
 " Searching.
 "
