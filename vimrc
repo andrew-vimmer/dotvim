@@ -82,7 +82,6 @@ let g:localvimrc_sandbox = 0
 " CtrlP plugin.
 "
 let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_custom_ignore = '\v(\.(git|hg|build))|build$'
 let g:ctrlp_map = '<C-p>'
 let g:ctrlp_max_files = 0
 let g:ctrlp_switch_buffer = 0
@@ -92,8 +91,6 @@ if executable('ag')
     let g:ctrlp_use_caching = 0
     let g:ctrlp_user_command = 'ag -l --nocolor -g "" %s'
 endif
-
-nnoremap <C-K> :CtrlPTag<CR>
 
 
 " neocomplete plugin.
