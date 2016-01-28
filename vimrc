@@ -154,7 +154,7 @@ vnoremap <Leader>r <ESC>:nohlsearch<CR>:silent! SyntasticReset<CR>gv
 "
 let g:ag_highlight = 1
 
-nnoremap <Leader>s :Ag! |
+nnoremap <Leader>/ :Ag! |
 
 " Searching.
 "
