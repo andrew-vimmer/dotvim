@@ -1,4 +1,3 @@
-
 " Technical behaviour corrections.
 "
 " File encodings.
@@ -7,11 +6,8 @@ set fileencodings=ucs-bom,utf-8,default,cp1251,latin1
 set notimeout nottimeout
 " Not using auto to suppress a SEGV while working on large files.
 set regexpengine=2
-
 " Automatically close preview window when completion is done.
 autocmd CompleteDone * silent! pclose
-" Automatically set file type for *.h files to C, since it defaults to CPP.
-autocmd BufNew,BufNewFile,BufRead *.h set filetype=c
 
 " Common behaviour corrections.
 "
@@ -54,6 +50,13 @@ call plug#end()
 "
 syntax on
 filetype plugin indent on
+
+augroup FileTypes
+    autocmd!
+
+    " Automatically set file type for *.h files to C, since it defaults to CPP.
+    autocmd BufNew,BufNewFile,BufRead *.h set filetype=c
+augroup END
 
 " Spelling.
 "
