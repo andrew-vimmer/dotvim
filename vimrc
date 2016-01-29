@@ -57,12 +57,16 @@ filetype plugin indent on
 
 " Spelling.
 "
-" Git commit messages.
-autocmd BufRead *.git/COMMIT_EDITMSG set spell
-" Mercurial commit messages.
-autocmd BufRead *hg-editor* set spell
-" Perforce commit messages.
-autocmd BufRead /tmp/tmp.*.* set spell
+augroup Spelling
+    autocmd!
+
+    " Git commit messages.
+    autocmd BufRead *.git/COMMIT_EDITMSG setlocal spell
+    " Mercurial commit messages.
+    autocmd BufRead *hg-editor* setlocal spell
+    " Perforce commit messages.
+    autocmd BufRead /tmp/tmp.*.* setlocal spell
+augroup END
 
 
 " vim-localvimrc plugin.
