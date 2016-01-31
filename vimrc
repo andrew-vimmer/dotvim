@@ -12,7 +12,7 @@ autocmd CompleteDone * silent! pclose
 " Common behaviour corrections.
 "
 " Leader key mapping.
-let mapleader = ","
+let mapleader = ','
 
 " Simplified command prompt access in normal mode.
 nnoremap ; :
@@ -53,7 +53,6 @@ filetype plugin indent on
 
 augroup FileTypes
     autocmd!
-
     " Automatically set file type for *.h files to C, since it defaults to CPP.
     autocmd BufNew,BufNewFile,BufRead *.h set filetype=c
 augroup END
@@ -62,7 +61,6 @@ augroup END
 "
 augroup Spelling
     autocmd!
-
     " Git commit messages.
     autocmd BufRead *.git/COMMIT_EDITMSG setlocal spell
     " Mercurial commit messages.
@@ -120,7 +118,7 @@ let g:UltiSnipsSnippetDirectories = ['UltiSnips', '.']
 let g:EasyMotion_add_search_history = 0
 let g:EasyMotion_do_shade = 0
 let g:EasyMotion_do_mapping = 0
-let g:EasyMotion_keys = "jfkdhglsienvowmcpqx,z/a;"
+let g:EasyMotion_keys = 'jfkdhglsienvowmcpqx,z/a;'
 let g:EasyMotion_move_highlight = 0
 let g:EasyMotion_off_screen_search = 0
 let g:EasyMotion_use_smartsign_us = 1
@@ -140,14 +138,14 @@ let g:syntastic_style_error_symbol = 'e'
 let g:syntastic_style_warning_symbol = 'w'
 
 let g:syntastic_mode_map = {
-    \ "mode": "passive",
-    \ "active_filetypes": [],
-    \ "passive_filetypes": [] }
+    \ 'mode': 'passive',
+    \ 'active_filetypes': [],
+    \ 'passive_filetypes': [] }
 
 let g:syntastic_c_checkers = ['clang_check']
 let g_syntastic_python_checkers = ['python', 'flake8']
 
-let g:syntastic_c_clang_check_post_args = ""
+let g:syntastic_c_clang_check_post_args = ''
 
 " Error checking with Syntastic.
 nnoremap <Leader>e :update<CR>:silent! SyntasticCheck<CR>:silent! Errors<CR>
