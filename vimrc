@@ -152,12 +152,13 @@ vmap <Space> <Plug>(easymotion-tn)
 
 " Syntastic plugin.
 "
+let g:syntastic_aggregate_errors = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_error_symbol = 'E'
-let g:syntastic_warning_symbol = 'W'
 let g:syntastic_style_error_symbol = 'e'
 let g:syntastic_style_warning_symbol = 'w'
+let g:syntastic_warning_symbol = 'W'
 
 let g:syntastic_mode_map = {
     \ 'mode': 'passive',
@@ -165,7 +166,7 @@ let g:syntastic_mode_map = {
     \ 'passive_filetypes': [] }
 
 let g:syntastic_c_checkers = ['clang_check']
-let g_syntastic_python_checkers = ['python', 'flake8']
+let g_syntastic_python_checkers = ['python', 'flake8', 'pylint']
 
 let g:syntastic_c_clang_check_post_args = ''
 
