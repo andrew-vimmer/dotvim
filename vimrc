@@ -147,12 +147,29 @@ let g_syntastic_python_checkers = ['python', 'flake8']
 
 let g:syntastic_c_clang_check_post_args = ''
 
-" Error checking with Syntastic.
-nnoremap <Leader>e :update<CR>:silent! SyntasticCheck<CR>:silent! Errors<CR>
-vnoremap <Leader>e <ESC>:update<CR>:silent! SyntasticCheck<CR>:silent! Errors<CR>gv
-" Common reset (highlighting and Syntastic errors).
-nnoremap <Leader>r :nohlsearch<CR>:silent! SyntasticReset<CR>
-vnoremap <Leader>r <ESC>:nohlsearch<CR>:silent! SyntasticReset<CR>gv
+function! CheckErrors()
+    update
+    if exists(':SyntasticCheck')
+        SyntasticCheck
+        Errors
+    endif
+endfunction
+command! CheckErrors :call CheckErrors()
+
+function! CommonReset()
+    if exists(':SyntasticReset')
+        SyntasticReset
+    endif
+    redraw!
+endfunction
+command! CommonReset :nohlsearch|call CommonReset()
+
+" Error checking.
+nnoremap <Leader>e :CheckErrors<CR>
+vnoremap <Leader>e <ESC>:CheckErrors<CR>gv
+" Common reset.
+nnoremap <Leader>r :CommonReset<CR>
+vnoremap <Leader>r <ESC>:CommonReset<CR>gv
 
 
 " Ag.vim plugin.
@@ -163,9 +180,9 @@ nnoremap <Leader>/ :Ag! |
 
 " Searching.
 "
-set incsearch
 set hlsearch
 set ignorecase
+set incsearch
 set smartcase
 
 
