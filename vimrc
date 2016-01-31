@@ -51,11 +51,33 @@ call plug#end()
 syntax on
 filetype plugin indent on
 
-augroup FileTypes
+augroup FileTypeDetect
     autocmd!
-    " Automatically set file type for *.h files to C, since it defaults to CPP.
-    autocmd BufNew,BufNewFile,BufRead *.h set filetype=c
+    " Fix header files defaulting to CPP.
+    autocmd BufNew,BufNewFile,BufRead *.h setfiletype=c
 augroup END
+
+
+" Markdown file type handling.
+function! UpdateMarkdown()
+    silent !python -m markdown
+        \ -x markdown.extensions.admonition
+        \ -x markdown.extensions.extra
+        \ -x markdown.extensions.sane_lists
+        \ -x markdown.extensions.toc
+        \ -o html5
+        \ "%:p" > "%:r.html"
+    redraw!
+endfunction
+
+augroup Markdown
+    autocmd!
+    " Fix file type defaulting to "modula2".
+    autocmd BufNew,BufNewFile,BufRead *.md setfiletype=markdown
+    " Export HTML file with the same base name on save.
+    autocmd BufWritePost *.md,*.markdown call UpdateMarkdown()
+augroup END
+
 
 " Spelling.
 "
