@@ -40,6 +40,7 @@ Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/syntastic', {'for': ['c', 'cpp', 'python']}
+Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 
