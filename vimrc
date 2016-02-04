@@ -37,6 +37,7 @@ Plug 'andrew-vimmer/c-snippets'
 Plug 'calmofthestorm/vim-indent-object'
 Plug 'embear/vim-localvimrc'
 Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
+Plug 'martong/vim-quick-search'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/syntastic', {'for': ['c', 'cpp', 'python']}
