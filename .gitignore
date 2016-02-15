@@ -1,16 +1,10 @@
-
 # Directory change history.
-#
 /.netrwhist
-
-# Plugins directory.
-#
-/plugins
-
-# Custom dictionaries.
-#
-/spell
-
 # Snippets.
-#
 /UltiSnips
+# Outdated `vim-plug` module.
+/autoload/plug.vim.old
+# Plugins directory.
+/plugins
+# Custom dictionaries.
+/spell
