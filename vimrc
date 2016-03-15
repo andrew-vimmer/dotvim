@@ -276,12 +276,6 @@ nnoremap <ESC>j <C-w>j
 nnoremap <ESC>h <C-w>h
 nnoremap <ESC>k <C-w>k
 nnoremap <ESC>l <C-w>l
-nnoremap <ESC>J <C-w>J
-nnoremap <ESC>H <C-w>H
-nnoremap <ESC>K <C-w>K
-nnoremap <ESC>L <C-w>L
-nnoremap <ESC>v <C-w>v
-nnoremap <ESC>s <C-w>s
 
 
 " Automatically remove whitespace on save.
