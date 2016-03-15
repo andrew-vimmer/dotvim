@@ -29,6 +29,7 @@ vnoremap s <ESC>:update<CR>gv
 "
 call plug#begin('~/.vim/plugins')
 
+Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'Shougo/neocomplete.vim'
 Plug 'SirVer/ultisnips'
@@ -110,9 +111,12 @@ let g:localvimrc_sandbox = 0
 
 " CtrlP plugin.
 "
-let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_by_filename = 1
+let g:ctrlp_cmd = 'CtrlPMRU'
 let g:ctrlp_map = '<C-f>'
+let g:ctrlp_match_func = {'match': 'pymatcher#PyMatch'}
 let g:ctrlp_max_files = 0
+let g:ctrlp_mruf_relative = 1
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = 'w'
 
