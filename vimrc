@@ -201,7 +201,7 @@ vnoremap <Leader>r <ESC>:CommonReset<CR>gv
 "
 let g:ag_highlight = 1
 
-nnoremap <Leader>/ :Ag! |
+nnoremap <Leader>/ :LAg! |
 
 " Searching.
 "
