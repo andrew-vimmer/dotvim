@@ -264,16 +264,6 @@ set statusline=%m%w%h%r\ %f\ %{&fenc!=''?&fenc:&enc}%{&bomb?'\+BOM':''}\,\ %{&ff
 set laststatus=2
 
 
-" Tab navigation.
-"
-nnoremap <ESC>n :tabnext<CR>
-nnoremap <ESC>p :tabprevious<CR>
-nnoremap <ESC>N :tabmove +1<CR>
-nnoremap <ESC>P :tabmove -1<CR>
-nnoremap <ESC>t :tabnew<CR>
-nnoremap <ESC>w :tabclose<CR>
-
-
 " Window navigation.
 "
 nnoremap <ESC>j <C-w>j
