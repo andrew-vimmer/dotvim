@@ -41,7 +41,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'embear/vim-localvimrc'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'rking/ag.vim'
-Plug 'scrooloose/syntastic', {'for': ['c', 'cpp', 'python']}
+Plug 'scrooloose/syntastic', {'for': ['c', 'python']}
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
