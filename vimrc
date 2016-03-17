@@ -98,9 +98,9 @@ augroup END
 " vim-localvimrc plugin.
 "
 " NOTE:
-"   The configuration makes all local configuration files be loaded without
-"   asking or being sandboxed. The reason for such behaviour is that there are
-"   plenty of ways to achieve persistence on the system, so I find default
+"   The settings make all local configuration files be loaded without asking or
+"   being sandboxed. The reason for such behaviour is that there are plenty of
+"   ways to achieve persistence on the system, so I find default
 "   settings redundant. If you'd like to debug issues arising from local
 "   configuration files, revert these to default or use the
 "   `g:localvimrc_debug` instead.
