@@ -112,7 +112,7 @@ let g:localvimrc_sandbox = 0
 " CtrlP plugin.
 "
 let g:ctrlp_by_filename = 1
-let g:ctrlp_cmd = 'CtrlPMRU'
+let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_map = '<C-f>'
 let g:ctrlp_match_func = {'match': 'pymatcher#PyMatch'}
 let g:ctrlp_max_files = 0
