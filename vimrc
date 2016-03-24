@@ -266,14 +266,6 @@ set statusline=%m%w%h%r\ %f\ %{&fenc!=''?&fenc:&enc}%{&bomb?'\+BOM':''}\,\ %{&ff
 set laststatus=2
 
 
-" Window navigation.
-"
-nnoremap <ESC>j <C-w>j
-nnoremap <ESC>h <C-w>h
-nnoremap <ESC>k <C-w>k
-nnoremap <ESC>l <C-w>l
-
-
 " Automatically remove whitespace on save.
 "
 autocmd FileType c,python autocmd BufWritePre <buffer> StripWhitespace
