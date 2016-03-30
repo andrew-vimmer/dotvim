@@ -1,16 +1,12 @@
-" Technical behaviour corrections.
-"
 " File encodings.
 set fileencodings=ucs-bom,utf-8,default,cp1251,latin1
-" Tune time out length in order to use <ESC> mapping for <M-...> combinations.
+" No time out for mappings in order to improve stability for remote terminals.
 set notimeout nottimeout
 " Not using auto to suppress a SEGV while working on large files.
 set regexpengine=2
 " Automatically close preview window when completion is done.
 autocmd CompleteDone * silent! pclose
 
-" Common behaviour corrections.
-"
 " Leader key mapping.
 let mapleader = ','
 
@@ -54,14 +50,27 @@ call plug#end()
 syntax on
 filetype plugin indent on
 
-augroup FileTypeDetect
+
+" C language specific handling.
+"
+augroup C
     autocmd!
     " Fix header files defaulting to CPP.
     autocmd BufNew,BufNewFile,BufRead *.h setfiletype=c
+    " Automatically strip trailing whitespace on save.
+    autocmd FileType c autocmd BufWritePre <buffer> StripWhitespace
 augroup END
 
 
-" Markdown file type handling.
+" Python language specific handling.
+"
+augroup Python
+    autocmd!
+    " Automatically strip trailing whitespace on save.
+    autocmd FileType python autocmd BufWritePre <buffer> StripWhitespace
+augroup END
+
+
 function! UpdateMarkdown()
     silent !python -m markdown
         \ -x markdown.extensions.admonition
@@ -73,6 +82,8 @@ function! UpdateMarkdown()
     redraw!
 endfunction
 
+" Markdown specific handling.
+"
 augroup Markdown
     autocmd!
     " Fix file type defaulting to "modula2".
@@ -131,10 +142,6 @@ endif
 " neocomplete plugin.
 "
 let g:neocomplete#enable_at_startup = 1
-
-if !exists('g:neocomplete#force_omni_input_patterns')
-    let g:neocomplete#force_omni_input_patterns = {}
-endif
 
 
 " UltiSnips plugin.
@@ -264,11 +271,6 @@ autocmd VimResized * wincmd =
 set statusline=%m%w%h%r\ %f\ %{&fenc!=''?&fenc:&enc}%{&bomb?'\+BOM':''}\,\ %{&ff}\ %=%l/%L\,\ %v\ "
 " Show always.
 set laststatus=2
-
-
-" Automatically remove whitespace on save.
-"
-autocmd FileType c,python autocmd BufWritePre <buffer> StripWhitespace
 
 
 " Spaces and Tabs.
