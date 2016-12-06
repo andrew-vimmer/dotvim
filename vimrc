@@ -32,12 +32,11 @@ Plug 'SirVer/ultisnips'
 Plug 'altercation/vim-colors-solarized'
 Plug 'andrew-vimmer/c-snippets'
 Plug 'andrew-vimmer/python-snippets'
-Plug 'andrew-vimmer/vim-quick-search'
 Plug 'calmofthestorm/vim-indent-object'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'embear/vim-localvimrc'
+Plug 'mhinz/vim-grepper'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'rking/ag.vim'
 Plug 'scrooloose/syntastic', {'for': ['c', 'python']}
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-repeat'
@@ -211,18 +210,16 @@ nnoremap <Leader>r :CommonReset<CR>
 vnoremap <Leader>r <ESC>:CommonReset<CR>gv
 
 
-" Ag.vim plugin.
-"
-let g:ag_highlight = 1
-
-nnoremap <Leader>/ :LAg! |
-
 " Searching.
 "
 set hlsearch
 set ignorecase
 set incsearch
 set smartcase
+
+" Global search operation.
+nmap gs <Plug>(GrepperOperator)
+xmap gs <Plug>(GrepperOperator)
 
 
 " Yank selected text to the '@/' register and escape newline characters and
