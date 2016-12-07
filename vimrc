@@ -41,6 +41,7 @@ Plug 'scrooloose/syntastic', {'for': ['c', 'python']}
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+Plug 'yssl/QFEnter'
 
 call plug#end()
 
@@ -137,6 +138,13 @@ if executable('ag')
     let g:ctrlp_use_caching = 0
     let g:ctrlp_user_command = 'ag -l --nocolor -g "" %s'
 endif
+
+
+" QFEnter plugin.
+"
+let g:qfenter_hopen_map = ['<C-CR>', '<C-s>', '<C-x>']
+let g:qfenter_vopen_map = ['<C-v>']
+let g:qfenter_topen_map = ['<C-t>']
 
 
 " neocomplete plugin.
