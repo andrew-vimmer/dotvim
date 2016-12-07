@@ -195,26 +195,26 @@ let g_syntastic_python_checkers = ['python', 'flake8', 'pylint']
 
 let g:syntastic_c_clang_check_post_args = ''
 
-function! s:CheckErrors()
+function! s:CheckForErrors()
     update
     if exists(':SyntasticCheck')
         SyntasticCheck
         Errors
     endif
 endfunction
-command! CheckErrors :call <SID>CheckErrors()
+command! CheckForErrors :call <SID>CheckForErrors()
 
-function! CommonReset()
+function! s:CommonReset()
     if exists(':SyntasticReset')
         SyntasticReset
     endif
     redraw!
 endfunction
-command! CommonReset :nohlsearch|call CommonReset()
+command! CommonReset :nohlsearch|call <SID>CommonReset()
 
 " Error checking.
-nnoremap <Leader>e :CheckErrors<CR>
-vnoremap <Leader>e <ESC>:CheckErrors<CR>gv
+nnoremap <Leader>e :CheckForErrors<CR>
+vnoremap <Leader>e <ESC>:CheckForErrors<CR>gv
 " Common reset.
 nnoremap <Leader>r :CommonReset<CR>
 vnoremap <Leader>r <ESC>:CommonReset<CR>gv
@@ -251,7 +251,6 @@ endfunction
 xnoremap * :<C-u>call <SID>VisualStarSearchSet('/')<CR>/<C-R>=@/<CR><CR>N
 " Backward search visually selected text using '#' command.
 xnoremap # :<C-u>call <SID>VisualStarSearchSet('?')<CR>?<C-R>=@/<CR><CR>n
-
 " Stay on current match.
 nnoremap * *N
 
