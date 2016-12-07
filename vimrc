@@ -58,17 +58,18 @@ augroup C
     autocmd!
     " Fix header files defaulting to CPP.
     autocmd BufNew,BufNewFile,BufRead *.h setfiletype=c
-    " Automatically strip trailing whitespace on save.
-    autocmd FileType c autocmd BufWritePre <buffer> StripWhitespace
 augroup END
 
 
-" Python language specific handling.
+" White space stripping.
 "
-augroup Python
+augroup StripWhitespace
     autocmd!
-    " Automatically strip trailing whitespace on save.
-    autocmd FileType python autocmd BufWritePre <buffer> StripWhitespace
+
+    if exists(':StripWhitespace')
+        autocmd FileType c autocmd BufWritePre <buffer> StripWhitespace
+        autocmd FileType python autocmd BufWritePre <buffer> StripWhitespace
+    endif
 augroup END
 
 
