@@ -152,6 +152,7 @@ let g:qfenter_topen_map = ['<C-t>']
 " neocomplete plugin.
 "
 let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
 
 
 " UltiSnips plugin.
