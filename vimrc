@@ -73,7 +73,7 @@ augroup StripWhitespace
 augroup END
 
 
-function! UpdateMarkdown()
+function! s:UpdateMarkdown()
     silent !python -m markdown
         \ -x markdown.extensions.admonition
         \ -x markdown.extensions.extra
@@ -83,6 +83,7 @@ function! UpdateMarkdown()
         \ "%:p" > "%:r.html"
     redraw!
 endfunction
+command! UpdateMarkdown :call <SID>UpdateMarkdown()
 
 " Markdown specific handling.
 "
@@ -91,7 +92,7 @@ augroup Markdown
     " Fix file type defaulting to "modula2".
     autocmd BufNew,BufNewFile,BufRead *.md setfiletype=markdown
     " Export HTML file with the same base name on save.
-    autocmd BufWritePost *.md,*.markdown call UpdateMarkdown()
+    autocmd BufWritePost *.md,*.markdown :UpdateMarkdown
 augroup END
 
 
@@ -194,14 +195,14 @@ let g_syntastic_python_checkers = ['python', 'flake8', 'pylint']
 
 let g:syntastic_c_clang_check_post_args = ''
 
-function! CheckErrors()
+function! s:CheckErrors()
     update
     if exists(':SyntasticCheck')
         SyntasticCheck
         Errors
     endif
 endfunction
-command! CheckErrors :call CheckErrors()
+command! CheckErrors :call <SID>CheckErrors()
 
 function! CommonReset()
     if exists(':SyntasticReset')
@@ -233,7 +234,7 @@ xmap gs <Plug>(GrepperOperator)
 
 " Yank selected text to the '@/' register and escape newline characters and
 " specified substrings.
-function! YankSelected(cmdtype)
+function! s:YankSelected(cmdtype)
     let temp = @"
 
     normal! gvy
@@ -244,9 +245,9 @@ function! YankSelected(cmdtype)
 endfunction
 
 " Forward search visually selected text using '*' command.
-xnoremap * :<C-u>call YankSelected('/')<CR>/<C-R>=@/<CR><CR>N
+xnoremap * :<C-u>call <SID>YankSelected('/')<CR>/<C-R>=@/<CR><CR>N
 " Backward search visually selected text using '#' command.
-xnoremap # :<C-u>call YankSelected('?')<CR>?<C-R>=@/<CR><CR>n
+xnoremap # :<C-u>call <SID>YankSelected('?')<CR>?<C-R>=@/<CR><CR>n
 
 " Stay on current match.
 nnoremap * *N
