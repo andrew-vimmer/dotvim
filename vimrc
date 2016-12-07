@@ -257,7 +257,11 @@ set background=dark
 " Guide lines.
 set colorcolumn=80
 " Color scheme.
-colorscheme solarized
+try
+    colorscheme solarized
+catch /^Vim\%((\a\+)\)\=:E185/
+    colorscheme slate
+endtry
 " Never really found them useful anyway.
 set nofoldenable
 " Minimal number of screen lines visible above/below cursor.
