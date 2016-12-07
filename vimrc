@@ -232,22 +232,25 @@ nmap gs <Plug>(GrepperOperator)
 xmap gs <Plug>(GrepperOperator)
 
 
-" Yank selected text to the '@/' register and escape newline characters and
-" specified substrings.
-function! s:YankSelected(cmdtype)
+" Copy from 'https://github.com/bronson/vim-visual-star-search'.
+"
+" The reason why not the plugin itself is used here is that it sets an
+" undesired mapping, which's hard to override.
+function! s:VisualStarSearchSet(cmdtype)
     let temp = @"
-
     normal! gvy
 
     let @" = escape(@", a:cmdtype.'\*')
     let @/ = substitute(@", '\n', '\\n', 'g')
+    let @/ = substitute(@/, '\[', '\\[', 'g')
+    let @/ = substitute(@/, '\~', '\\~', 'g')
     let @" = temp
 endfunction
 
 " Forward search visually selected text using '*' command.
-xnoremap * :<C-u>call <SID>YankSelected('/')<CR>/<C-R>=@/<CR><CR>N
+xnoremap * :<C-u>call <SID>VisualStarSearchSet('/')<CR>/<C-R>=@/<CR><CR>N
 " Backward search visually selected text using '#' command.
-xnoremap # :<C-u>call <SID>YankSelected('?')<CR>?<C-R>=@/<CR><CR>n
+xnoremap # :<C-u>call <SID>VisualStarSearchSet('?')<CR>?<C-R>=@/<CR><CR>n
 
 " Stay on current match.
 nnoremap * *N
