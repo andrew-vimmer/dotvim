@@ -164,9 +164,9 @@ let g:UltiSnipsSnippetDirectories = ['UltiSnips', '.']
 " EasyMotion plugin.
 "
 let g:EasyMotion_add_search_history = 0
-let g:EasyMotion_do_shade = 0
 let g:EasyMotion_do_mapping = 0
-let g:EasyMotion_keys = 'jfkdhglsienvowmcpqx,z/a;'
+let g:EasyMotion_do_shade = 0
+let g:EasyMotion_keys = 'fjdksla;ghtyrueiwoqpvnc,x.z/'
 let g:EasyMotion_move_highlight = 0
 let g:EasyMotion_off_screen_search = 0
 let g:EasyMotion_use_smartsign_us = 1
