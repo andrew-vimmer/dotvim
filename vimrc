@@ -37,7 +37,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'embear/vim-localvimrc'
 Plug 'mhinz/vim-grepper'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'scrooloose/syntastic', {'for': ['c', 'python']}
+Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
@@ -192,7 +192,8 @@ let g:syntastic_mode_map = {
     \ 'passive_filetypes': [] }
 
 let g:syntastic_c_checkers = ['clang_check']
-let g_syntastic_python_checkers = ['python', 'flake8', 'pylint']
+let g:syntastic_go_checkers = ['go', 'govet', 'gofmt']
+let g:syntastic_python_checkers = ['python', 'flake8', 'pylint']
 
 let g:syntastic_c_clang_check_post_args = ''
 
