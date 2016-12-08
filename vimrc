@@ -61,19 +61,7 @@ augroup C
 augroup END
 
 
-" White space stripping.
-"
-augroup StripWhitespace
-    autocmd!
-
-    if exists(':StripWhitespace')
-        autocmd FileType c autocmd BufWritePre <buffer> StripWhitespace
-        autocmd FileType python autocmd BufWritePre <buffer> StripWhitespace
-    endif
-augroup END
-
-
-function! s:UpdateMarkdown()
+function! s:RenderMarkdown()
     silent !python -m markdown
         \ -x markdown.extensions.admonition
         \ -x markdown.extensions.extra
@@ -83,7 +71,8 @@ function! s:UpdateMarkdown()
         \ "%:p" > "%:r.html"
     redraw!
 endfunction
-command! UpdateMarkdown :call <SID>UpdateMarkdown()
+command! RenderMarkdown :call <SID>RenderMarkdown()
+
 
 " Markdown specific handling.
 "
@@ -91,8 +80,18 @@ augroup Markdown
     autocmd!
     " Fix file type defaulting to "modula2".
     autocmd BufNew,BufNewFile,BufRead *.md setfiletype=markdown
-    " Export HTML file with the same base name on save.
-    autocmd BufWritePost *.md,*.markdown :UpdateMarkdown
+augroup END
+
+
+" White space stripping.
+"
+augroup StripWhitespace
+    autocmd!
+
+    if exists(':StripWhitespace')
+        autocmd FileType c autocmd BufWritePre <buffer> StripWhitespace
+        autocmd FileType python autocmd BufWritePre <buffer> StripWhitespace
+    endif
 augroup END
 
 
