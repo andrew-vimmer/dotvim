@@ -1,3 +1,5 @@
+# Temporary files.
+*.swp
 # Directory change history.
 /.netrwhist
 # Snippets.
