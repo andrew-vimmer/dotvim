@@ -25,6 +25,7 @@ vnoremap s <ESC>:update<CR>gv
 "
 call plug#begin('~/.vim/plugins')
 
+Plug 'Chiel92/vim-autoformat'
 Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'Shougo/neocomplete.vim'
