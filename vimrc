@@ -63,19 +63,6 @@ augroup C
 augroup END
 
 
-function! s:RenderMarkdown()
-    silent !python -m markdown
-        \ -x markdown.extensions.admonition
-        \ -x markdown.extensions.extra
-        \ -x markdown.extensions.sane_lists
-        \ -x markdown.extensions.toc
-        \ -o html5
-        \ "%:p" > "%:r.html"
-    redraw!
-endfunction
-command! RenderMarkdown :call <SID>RenderMarkdown()
-
-
 " Markdown specific handling.
 "
 augroup Markdown
