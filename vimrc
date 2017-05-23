@@ -273,8 +273,6 @@ endtry
 set nofoldenable
 " Minimal number of screen lines visible above/below cursor.
 set scrolloff=3
-" Prefer vertical splits on the right.
-set splitright
 " Disable screen flickering on bell character.
 set visualbell t_vb=
 set wildmenu
