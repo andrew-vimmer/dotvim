@@ -72,18 +72,6 @@ augroup Markdown
 augroup END
 
 
-" White space stripping.
-"
-augroup StripWhitespace
-    autocmd!
-
-    if exists(':StripWhitespace')
-        autocmd FileType c autocmd BufWritePre <buffer> StripWhitespace
-        autocmd FileType python autocmd BufWritePre <buffer> StripWhitespace
-    endif
-augroup END
-
-
 " Spelling.
 "
 augroup Spelling
