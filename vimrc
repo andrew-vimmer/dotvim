@@ -48,15 +48,6 @@ Plug 'yssl/QFEnter'
 call plug#end()
 
 
-" C language specific handling.
-"
-augroup C
-    autocmd!
-    " Fix header files defaulting to CPP.
-    autocmd BufNew,BufNewFile,BufRead *.h setfiletype=c
-augroup END
-
-
 " Markdown specific handling.
 "
 augroup Markdown
@@ -114,9 +105,11 @@ endif
 
 " QFEnter plugin.
 "
-let g:qfenter_hopen_map = ['<C-CR>', '<C-s>', '<C-x>']
-let g:qfenter_vopen_map = ['<C-v>']
-let g:qfenter_topen_map = ['<C-t>']
+let g:qfenter_keymap = {}
+let g:qfenter_keymap.open = ['<CR>', '<2-LeftMouse>']
+let g:qfenter_keymap.vopen = ['<C-v>']
+let g:qfenter_keymap.hopen = ['<C-CR>', '<C-s>', '<C-x>']
+let g:qfenter_keymap.topen = ['<C-t>']
 
 
 " neocomplete plugin.
