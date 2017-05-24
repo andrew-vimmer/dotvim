@@ -175,6 +175,7 @@ let g:syntastic_c_clang_check_post_args = ''
 
 function! s:CheckForErrors()
     update
+    setlocal spell
     if exists(':SyntasticCheck')
         SyntasticCheck
         Errors
@@ -183,6 +184,7 @@ endfunction
 command! CheckForErrors :call <SID>CheckForErrors()
 
 function! s:CommonReset()
+    setlocal nospell
     if exists(':SyntasticReset')
         SyntasticReset
     endif
