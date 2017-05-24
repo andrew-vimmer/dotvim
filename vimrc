@@ -48,12 +48,6 @@ Plug 'yssl/QFEnter'
 call plug#end()
 
 
-" Syntax Highlighting and Indentation.
-"
-syntax on
-filetype plugin indent on
-
-
 " C language specific handling.
 "
 augroup C
