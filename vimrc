@@ -109,7 +109,6 @@ let g:neocomplete#enable_smart_case = 1
 
 " UltiSnips plugin.
 "
-let g:UltiSnipsEditSplit = 'horizontal'
 let g:UltiSnipsSnippetDirectories = ['UltiSnips', '.']
 
 
