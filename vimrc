@@ -59,6 +59,11 @@ augroup Spelling
 augroup END
 
 
+" Autoformat plugin.
+"
+let g:autoformat_autoindent = 0
+
+
 " vim-localvimrc plugin.
 "
 " NOTE:
