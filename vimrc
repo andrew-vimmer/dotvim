@@ -228,6 +228,7 @@ set nofoldenable
 set scrolloff=3
 " Disable screen flickering on bell character.
 set visualbell t_vb=
+" Display all matching files on tab completion.
 set wildmenu
 
 " Automatically resize splits.
