@@ -151,6 +151,7 @@ let g:syntastic_text_checkers = ['proselint']
 
 function! s:CheckForErrors()
     update
+    setlocal list
     setlocal spell
     if exists(':SyntasticCheck')
         SyntasticCheck
@@ -160,6 +161,7 @@ endfunction
 command! CheckForErrors :call <SID>CheckForErrors()
 
 function! s:CommonReset()
+    setlocal nolist
     setlocal nospell
     if exists(':SyntasticReset')
         SyntasticReset
@@ -222,6 +224,8 @@ try
 catch /^Vim\%((\a\+)\)\=:E185/
     colorscheme slate
 endtry
+" Characters to use in `list` mode.
+set listchars=tab:!\ ,eol:¬
 " Never really found them useful anyway.
 set nofoldenable
 " Minimal number of screen lines visible above/below cursor.
