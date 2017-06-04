@@ -239,7 +239,7 @@ autocmd VimResized * wincmd =
 
 " Status line.
 "
-set statusline=%m%w%r\ %f%=#%l\ /%L\ "
+set statusline=%m%w%r\ %f%=#\ %l\ "
 " Show always.
 set laststatus=2
 
