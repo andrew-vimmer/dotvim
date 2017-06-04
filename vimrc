@@ -48,15 +48,6 @@ Plug 'yssl/QFEnter'
 call plug#end()
 
 
-" Markdown specific handling.
-"
-augroup Markdown
-    autocmd!
-    " Fix file type defaulting to "modula2".
-    autocmd BufNew,BufNewFile,BufRead *.md setfiletype=markdown
-augroup END
-
-
 " Spelling.
 "
 augroup Spelling
