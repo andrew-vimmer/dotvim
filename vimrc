@@ -153,6 +153,7 @@ let g:syntastic_c_clang_check_post_args = ''
 let g:syntastic_go_checkers = ['go', 'govet', 'gofmt']
 let g:syntastic_python_checkers = ['python', 'flake8', 'pylint']
 let g:syntastic_text_checkers = ['proselint']
+let g:syntastic_typescript_checkers = ['tslint', 'tsuquyomi']
 
 
 function! s:CheckForErrors()
