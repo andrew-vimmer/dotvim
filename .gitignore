@@ -10,3 +10,5 @@
 /plugins
 # Custom dictionaries.
 /spell
+# neovim soft link.
+init.vim
