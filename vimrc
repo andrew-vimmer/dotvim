@@ -23,7 +23,7 @@ vnoremap s <ESC>:update<CR>gv
 
 " Enable plugins.
 "
-call plug#begin('~/.vim/plugins')
+call plug#begin()
 
 Plug 'Chiel92/vim-autoformat'
 Plug 'FelikZ/ctrlp-py-matcher'

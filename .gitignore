@@ -7,7 +7,7 @@
 # Outdated `vim-plug` module.
 /autoload/plug.vim.old
 # Plugins directory.
-/plugins
+/plugged
 # Custom dictionaries.
 /spell
 # neovim soft link.
