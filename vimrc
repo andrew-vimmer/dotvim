@@ -25,15 +25,16 @@ vnoremap s <ESC>:update<CR>gv
 "
 call plug#begin()
 
-Plug 'Chiel92/vim-autoformat'
-Plug 'FelikZ/ctrlp-py-matcher'
-Plug 'Lokaltog/vim-easymotion'
-Plug 'Quramy/tsuquyomi'
 if has('nvim')
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
     Plug 'Shougo/neocomplete.vim'
 endif
+
+Plug 'Chiel92/vim-autoformat'
+Plug 'FelikZ/ctrlp-py-matcher'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'Quramy/tsuquyomi'
 Plug 'SirVer/ultisnips'
 Plug 'altercation/vim-colors-solarized'
 Plug 'calmofthestorm/vim-indent-object'
