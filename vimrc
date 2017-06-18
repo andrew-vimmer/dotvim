@@ -82,7 +82,6 @@ let g:autoformat_autoindent = 0
 "   configuration files, revert these to default or use the
 "   `g:localvimrc_debug` instead.
 let g:localvimrc_ask = 0
-let g:localvimrc_name = ['.vimrc']
 let g:localvimrc_sandbox = 0
 
 
