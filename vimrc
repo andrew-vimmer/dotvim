@@ -27,8 +27,10 @@ call plug#begin()
 
 if has('nvim')
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    Plug 'w0rp/ale'
 else
     Plug 'Shougo/neocomplete.vim'
+    Plug 'scrooloose/syntastic'
 endif
 
 Plug 'Chiel92/vim-autoformat'
@@ -42,7 +44,6 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'embear/vim-localvimrc'
 Plug 'leafgarland/typescript-vim'
 Plug 'mhinz/vim-grepper'
-Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
