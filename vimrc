@@ -54,25 +54,7 @@ Plug 'yssl/QFEnter'
 call plug#end()
 
 
-" Spelling.
-"
-augroup Spelling
-    autocmd!
-    " Git commit messages.
-    autocmd BufRead *.git/COMMIT_EDITMSG setlocal spell
-    " Mercurial commit messages.
-    autocmd BufRead *hg-editor* setlocal spell
-    " Perforce commit messages.
-    autocmd BufRead /tmp/tmp.*.* setlocal spell
-augroup END
-
-
-" Autoformat plugin.
-"
-let g:autoformat_autoindent = 0
-
-
-" vim-localvimrc plugin.
+" Local configuration discovery.
 "
 " NOTE:
 "   The settings make all local configuration files be loaded without asking or
@@ -85,7 +67,7 @@ let g:localvimrc_ask = 0
 let g:localvimrc_sandbox = 0
 
 
-" CtrlP plugin.
+" Fuzzy file finder.
 "
 let g:ctrlp_by_filename = 1
 let g:ctrlp_cmd = 'CtrlPMixed'
@@ -104,7 +86,7 @@ if executable('ag')
 endif
 
 
-" QFEnter plugin.
+" QuickFix window rectifications.
 "
 let g:qfenter_keymap = {}
 let g:qfenter_keymap.open = ['<CR>', '<2-LeftMouse>']
@@ -113,7 +95,7 @@ let g:qfenter_keymap.hopen = ['<C-CR>', '<C-s>', '<C-x>']
 let g:qfenter_keymap.topen = ['<C-t>']
 
 
-" neocomplete/deoplete plugins.
+" Context free word completion.
 "
 let g:deoplete#enable_at_startup = 1
 
@@ -121,24 +103,27 @@ let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
 
 
-" UltiSnips plugin.
+" Text snippets.
 "
 let g:UltiSnipsSnippetDirectories = ['UltiSnips', '.']
 
 
-" EasyMotion plugin.
+" Automatic formatting.
 "
-let g:EasyMotion_add_search_history = 0
-let g:EasyMotion_do_mapping = 0
-let g:EasyMotion_do_shade = 0
-let g:EasyMotion_keys = 'fjdksla;ghtyrueiwoqpvnc,x.z/'
-let g:EasyMotion_move_highlight = 0
-let g:EasyMotion_off_screen_search = 0
-let g:EasyMotion_use_smartsign_us = 1
+let g:autoformat_autoindent = 0
 
-nmap <Space> <Plug>(easymotion-sn)
-omap <Space> <Plug>(easymotion-tn)
-vmap <Space> <Plug>(easymotion-tn)
+
+" Spelling.
+"
+augroup Spelling
+    autocmd!
+    " Git commit messages.
+    autocmd BufRead *.git/COMMIT_EDITMSG setlocal spell
+    " Mercurial commit messages.
+    autocmd BufRead *hg-editor* setlocal spell
+    " Perforce commit messages.
+    autocmd BufRead /tmp/tmp.*.* setlocal spell
+augroup END
 
 
 " Syntastic plugin.
@@ -193,22 +178,41 @@ nnoremap <Leader>r :CommonReset<CR>
 vnoremap <Leader>r <ESC>:CommonReset<CR>gv
 
 
+" Advanced motion operators.
+"
+let g:EasyMotion_add_search_history = 0
+let g:EasyMotion_do_mapping = 0
+let g:EasyMotion_do_shade = 0
+let g:EasyMotion_keys = 'fjdksla;ghtyrueiwoqpvnc,x.z/'
+let g:EasyMotion_move_highlight = 0
+let g:EasyMotion_off_screen_search = 0
+let g:EasyMotion_use_smartsign_us = 1
+
+nmap <Space> <Plug>(easymotion-sn)
+omap <Space> <Plug>(easymotion-tn)
+vmap <Space> <Plug>(easymotion-tn)
+
+
 " Searching.
 "
+" Highlight previous search matches.
 set hlsearch
+" Searches are case insensitive.
 set ignorecase
+" Matches are shown as soon as the pattern is being typed.
 set incsearch
+" If pattern contains upper case characters search becomes case sensitive.
 set smartcase
 
-" Global search operation.
+" Global search operators.
 nmap gs <Plug>(GrepperOperator)
 xmap gs <Plug>(GrepperOperator)
 
 
-" Copy from 'https://github.com/bronson/vim-visual-star-search'.
+" Copy from `https://github.com/bronson/vim-visual-star-search`.
 "
 " The reason why not the plugin itself is used here is that it sets an
-" undesired mapping, which's hard to override.
+" undesired mapping, which is hard to override.
 function! s:VisualStarSearchSet(cmdtype)
     let temp = @"
     normal! gvy
@@ -220,9 +224,9 @@ function! s:VisualStarSearchSet(cmdtype)
     let @" = temp
 endfunction
 
-" Forward search visually selected text using '*' command.
+" Forward search visually selected text using `*` command.
 xnoremap * :<C-u>call <SID>VisualStarSearchSet('/')<CR>/<C-R>=@/<CR><CR>N
-" Backward search visually selected text using '#' command.
+" Backward search visually selected text using `#` command.
 xnoremap # :<C-u>call <SID>VisualStarSearchSet('?')<CR>?<C-R>=@/<CR><CR>n
 " Stay on current match.
 nnoremap * *N
@@ -275,6 +279,7 @@ set shiftwidth=4
 
 " Editing.
 "
+" Line breaks cannot be removed in insert mode.
 set backspace=indent,start
 " Break undo sequence on carriage return.
 inoremap <CR> <C-g>u<CR>
@@ -283,14 +288,14 @@ inoremap <C-w> <C-g>u<C-w>
 " Break undo sequence on delete backward line.
 inoremap <C-u> <C-g>u<C-u>
 
-" Yank to the end of a line instead of being a 'yy' alias.
+" Yank to the end of a line instead of being a `yy` alias.
 nmap Y y$
 " Retain cursor position when yanking from visual mode.
 vmap y ygv<ESC>
 " Visually select changed or pasted text.
 nnoremap <expr> gp '`['.strpart(getregtype(), 0, 1).'`]'
 
-" Remap join to 'M' for Merge.
+" Remap join to `M` for Merge.
 nnoremap M J
 " Move line under cursor downwards.
 nnoremap J :m .+1<CR>
