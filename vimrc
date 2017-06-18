@@ -71,7 +71,7 @@ let g:localvimrc_sandbox = 0
 "
 let g:ctrlp_by_filename = 1
 let g:ctrlp_cmd = 'CtrlPMixed'
-let g:ctrlp_lazy_update = 10
+let g:ctrlp_lazy_update = 77
 let g:ctrlp_map = '<C-f>'
 let g:ctrlp_match_current_file = 1
 let g:ctrlp_match_func = {'match': 'pymatcher#PyMatch'}
