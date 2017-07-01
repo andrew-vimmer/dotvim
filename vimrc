@@ -38,11 +38,11 @@ Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'Quramy/tsuquyomi'
 Plug 'SirVer/ultisnips'
-Plug 'altercation/vim-colors-solarized'
 Plug 'calmofthestorm/vim-indent-object'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'embear/vim-localvimrc'
 Plug 'leafgarland/typescript-vim'
+Plug 'lifepillar/vim-solarized8'
 Plug 'mhinz/vim-grepper'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-fugitive'
@@ -234,12 +234,11 @@ nnoremap * *N
 
 " UI.
 "
-set background=dark
 " Guide lines.
 set colorcolumn=80
 " Color scheme.
 try
-    colorscheme solarized
+    colorscheme solarized8_dark_flat
 catch /^Vim\%((\a\+)\)\=:E185/
     colorscheme slate
 endtry
