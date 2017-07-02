@@ -28,9 +28,7 @@ call plug#begin()
 if has('nvim')
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
-    Plug 'w0rp/ale'
     Plug 'Shougo/neocomplete.vim'
-    " Plug 'scrooloose/syntastic'
 endif
 
 Plug 'Chiel92/vim-autoformat'
@@ -49,6 +47,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
+Plug 'w0rp/ale'
 Plug 'yssl/QFEnter'
 
 call plug#end()
@@ -127,36 +126,16 @@ augroup END
 
 " Error checking.
 "
-let g:ale_lint_on_enter = 0
-let g:ale_lint_on_text_changed = 'never'
-
-" Syntastic plugin.
-"
-let g:syntastic_aggregate_errors = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_error_symbol = 'E'
-let g:syntastic_style_error_symbol = 'e'
-let g:syntastic_style_warning_symbol = 'w'
-let g:syntastic_warning_symbol = 'W'
-
-let g:syntastic_mode_map = {
-    \ 'mode': 'passive',
-    \ 'active_filetypes': [],
-    \ 'passive_filetypes': [] }
-
-let g:syntastic_c_checkers = ['clang_check']
-let g:syntastic_c_clang_check_post_args = ''
-let g:syntastic_go_checkers = ['go', 'govet', 'gofmt']
-let g:syntastic_python_checkers = ['python', 'flake8', 'pylint']
-let g:syntastic_text_checkers = ['proselint']
-let g:syntastic_typescript_checkers = ['tslint', 'tsuquyomi']
-
+let g:ale_enabled = 0 
+let g:ale_open_list = 1
 
 function! s:CheckForErrors()
     update
     setlocal list
     setlocal spell
+    if exists(':ALEEnable')
+        ALEEnable
+    endif
     if exists(':SyntasticCheck')
         SyntasticCheck
         Errors
@@ -167,6 +146,9 @@ command! CheckForErrors :call <SID>CheckForErrors()
 function! s:CommonReset()
     setlocal nolist
     setlocal nospell
+    if exists(':ALEDisable')
+        ALEDisable
+    endif
     if exists(':SyntasticReset')
         SyntasticReset
     endif
