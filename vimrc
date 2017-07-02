@@ -136,10 +136,6 @@ function! s:CheckForErrors()
     if exists(':ALEEnable')
         ALEEnable
     endif
-    if exists(':SyntasticCheck')
-        SyntasticCheck
-        Errors
-    endif
 endfunction
 command! CheckForErrors :call <SID>CheckForErrors()
 
@@ -149,17 +145,13 @@ function! s:CommonReset()
     if exists(':ALEDisable')
         ALEDisable
     endif
-    if exists(':SyntasticReset')
-        SyntasticReset
-    endif
     redraw!
 endfunction
 command! CommonReset :nohlsearch|call <SID>CommonReset()
 
-" Error checking.
 nnoremap <Leader>e :CheckForErrors<CR>
 vnoremap <Leader>e <ESC>:CheckForErrors<CR>gv
-" Common reset.
+
 nnoremap <Leader>r :CommonReset<CR>
 vnoremap <Leader>r <ESC>:CommonReset<CR>gv
 
