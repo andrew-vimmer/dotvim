@@ -27,10 +27,10 @@ call plug#begin()
 
 if has('nvim')
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-    Plug 'w0rp/ale'
 else
+    Plug 'w0rp/ale'
     Plug 'Shougo/neocomplete.vim'
-    Plug 'scrooloose/syntastic'
+    " Plug 'scrooloose/syntastic'
 endif
 
 Plug 'Chiel92/vim-autoformat'
@@ -124,6 +124,11 @@ augroup Spelling
     autocmd BufRead /tmp/tmp.*.* setlocal spell
 augroup END
 
+
+" Error checking.
+"
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_text_changed = 'never'
 
 " Syntastic plugin.
 "
