@@ -34,7 +34,7 @@ if has('nvim')
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
     Plug 'Shougo/neocomplete.vim'
-    Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+    Plug 'Shougo/vimproc.vim', { 'do' : 'make' }
 endif
 
 Plug 'Chiel92/vim-autoformat'
@@ -119,7 +119,7 @@ let g:autoformat_autoindent = 0
 
 " Spelling.
 "
-augroup Spelling
+augroup vimrc_spelling
     autocmd!
     " Git commit messages.
     autocmd BufRead *.git/COMMIT_EDITMSG setlocal spell
