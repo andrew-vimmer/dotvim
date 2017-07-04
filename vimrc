@@ -1,13 +1,16 @@
 scriptencoding utf-8
 
+" Define a host group for the configuration script.
+augroup vimrc
+    autocmd!
+augroup END
+
 " File encodings.
 set fileencodings=ucs-bom,utf-8,default,cp1251,latin1
 " No time out for mappings in order to improve stability for remote terminals.
 set notimeout nottimeout
 " Not using auto to suppress a SEGV while working on large files.
 set regexpengine=2
-" Automatically close preview window when completion is done.
-autocmd CompleteDone * silent! pclose
 
 " Leader key mapping.
 let g:mapleader = ','
@@ -241,8 +244,10 @@ set visualbell t_vb=
 " Display all matching files on tab completion.
 set wildmenu
 
+" Automatically close preview window when completion is done.
+autocmd vimrc CompleteDone * silent! pclose
 " Automatically resize splits.
-autocmd VimResized * wincmd =
+autocmd vimrc VimResized * wincmd =
 
 
 " Status line.
