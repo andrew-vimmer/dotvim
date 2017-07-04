@@ -205,14 +205,14 @@ xmap gs <Plug>(GrepperOperator)
 " The reason why not the plugin itself is used here is that it sets an
 " undesired mapping, which is hard to override.
 function! s:VisualStarSearchSet(cmdtype)
-    let temp = @"
+    let l:temp = @"
     normal! gvy
 
     let @" = escape(@", a:cmdtype.'\*')
     let @/ = substitute(@", '\n', '\\n', 'g')
     let @/ = substitute(@/, '\[', '\\[', 'g')
     let @/ = substitute(@/, '\~', '\\~', 'g')
-    let @" = temp
+    let @" = l:temp
 endfunction
 
 " Forward search visually selected text using `*` command.
