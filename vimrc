@@ -286,6 +286,8 @@ nmap Y y$
 vmap y ygv<ESC>
 " Visually select changed or pasted text.
 nnoremap <expr> gp '`['.strpart(getregtype(), 0, 1).'`]'
+" Toggle character case of the word before the cursor.
+imap <C-f> <ESC>bg~iwA 
 
 " Remap join to `M` for Merge.
 nnoremap M J
