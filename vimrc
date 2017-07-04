@@ -130,6 +130,13 @@ augroup END
 let g:ale_enabled = 0 
 let g:ale_open_list = 1
 
+let g:ale_linters = {
+    \ 'go': 'all',
+    \ 'python': 'all',
+    \ 'text': 'all',
+    \ 'typescript': 'all',
+    \}
+
 function! s:CheckForErrors()
     update
     setlocal list
