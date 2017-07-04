@@ -10,7 +10,7 @@ set regexpengine=2
 autocmd CompleteDone * silent! pclose
 
 " Leader key mapping.
-let mapleader = ','
+let g:mapleader = ','
 
 " Simplified command prompt access in normal mode.
 nnoremap ; :
