@@ -143,7 +143,7 @@ let g:ale_linters = {
     \ 'typescript': 'all',
     \}
 
-function! s:CheckForErrors()
+function! s:Errors()
     update
     setlocal list
     setlocal spell
@@ -151,9 +151,9 @@ function! s:CheckForErrors()
         ALEEnable
     endif
 endfunction
-command! CheckForErrors :call <SID>CheckForErrors()
+command! Errors :call <SID>Errors()
 
-function! s:CommonReset()
+function! s:Reset()
     setlocal nolist
     setlocal nospell
     if exists(':ALEDisable')
@@ -161,13 +161,13 @@ function! s:CommonReset()
     endif
     redraw!
 endfunction
-command! CommonReset :nohlsearch|call <SID>CommonReset()
+command! Reset :nohlsearch|call <SID>Reset()
 
-nnoremap <Leader>e :CheckForErrors<CR>
-vnoremap <Leader>e <ESC>:CheckForErrors<CR>gv
+nnoremap <Leader>e :Errors<CR>
+vnoremap <Leader>e <ESC>:Errors<CR>gv
 
-nnoremap <Leader>r :CommonReset<CR>
-vnoremap <Leader>r <ESC>:CommonReset<CR>gv
+nnoremap <Leader>r :Reset<CR>
+vnoremap <Leader>r <ESC>:Reset<CR>gv
 
 
 " Advanced motion operators.
