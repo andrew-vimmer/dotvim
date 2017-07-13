@@ -147,8 +147,8 @@ function! s:Errors()
     update
     setlocal list
     setlocal spell
-    if exists(':ALEEnable')
-        ALEEnable
+    if g:loaded_ale
+        ALELint
     endif
 endfunction
 command! Errors :call <SID>Errors()
@@ -156,7 +156,8 @@ command! Errors :call <SID>Errors()
 function! s:Reset()
     setlocal nolist
     setlocal nospell
-    if exists(':ALEDisable')
+    if g:loaded_ale
+        ALEEnable
         ALEDisable
     endif
     redraw!
