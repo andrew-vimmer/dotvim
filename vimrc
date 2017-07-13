@@ -133,7 +133,7 @@ augroup END
 
 " Error checking.
 "
-let g:ale_enabled = 0 
+let g:ale_enabled = 0
 let g:ale_open_list = 1
 
 let g:ale_linters = {
