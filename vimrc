@@ -148,7 +148,7 @@ function! s:Errors()
     setlocal list
     setlocal spell
     if g:loaded_ale
-        ALELint
+        ALEEnable
     endif
 endfunction
 command! Errors :call <SID>Errors()
@@ -157,7 +157,6 @@ function! s:Reset()
     setlocal nolist
     setlocal nospell
     if g:loaded_ale
-        ALEEnable
         ALEDisable
     endif
     redraw!
