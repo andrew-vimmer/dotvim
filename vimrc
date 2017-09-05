@@ -235,7 +235,7 @@ catch /^Vim\%((\a\+)\)\=:E185/
     colorscheme slate
 endtry
 " Characters to use in `list` mode.
-set listchars=tab:!\ ,eol:¬
+set listchars=tab:.\ ,eol:¬
 " Never really found them useful anyway.
 set nofoldenable
 " Minimal number of screen lines visible above/below cursor.
