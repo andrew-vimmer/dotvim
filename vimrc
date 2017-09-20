@@ -220,8 +220,12 @@ endfunction
 xnoremap * :<C-u>call <SID>VisualStarSearchSet('/')<CR>/<C-R>=@/<CR><CR>N
 " Backward search visually selected text using `#` command.
 xnoremap # :<C-u>call <SID>VisualStarSearchSet('?')<CR>?<C-R>=@/<CR><CR>n
-" Stay on current match.
-nnoremap * *N
+" Ignore the ignorecase option, stay on current match.
+nnoremap <silent> * :let @/='\C\<' . expand('<cword>') . '\>'<CR>:let v:searchforward=1<CR>nN
+nnoremap <silent> g* :let @/='\C' . expand('<cword>')<CR>:let v:searchforward=1<CR>nN
+" Ignore the ignorecase option, move to the next match.
+nnoremap <silent> # :let @/='\C\<' . expand('<cword>') . '\>'<CR>:let v:searchforward=0<CR>n
+nnoremap <silent> g# :let @/='\C' . expand('<cword>')<CR>:let v:searchforward=0<CR>n
 
 
 " UI.
