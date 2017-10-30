@@ -288,10 +288,6 @@ nmap Y y$
 vmap y ygv<ESC>
 " Visually select changed or pasted text.
 nnoremap <expr> gp '`['.strpart(getregtype(), 0, 1).'`]'
-" Invert character case of the word before the cursor in insert mode.
-imap <C-^> <ESC>bg~iwA
-" Invert character case of the word before the cursor in command mode.
-cmap <C-^> <C-f>bg~iwA<C-c><C-r>=execute('redraw!')<CR>
 
 " Remap join to `M` for Merge.
 nnoremap M J
