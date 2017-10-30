@@ -299,6 +299,8 @@ nnoremap H <<
 nnoremap K :m .-2<CR>
 " Decrease indentation level of the line under cursor.
 nnoremap L >>
+" Remap visual join to `M` for Merge.
+vnoremap M v_J
 " Move selected lines downwards and retain selection.
 vnoremap J :m '>+1<CR>gv
 " Decrease indentation level of selected lines and retain selection.
