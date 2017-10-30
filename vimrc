@@ -40,13 +40,11 @@ endif
 Plug 'Chiel92/vim-autoformat'
 Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'Lokaltog/vim-easymotion'
-Plug 'Quramy/tsuquyomi'
 Plug 'SirVer/ultisnips'
 Plug 'calmofthestorm/vim-indent-object'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'embear/vim-localvimrc'
 Plug 'junegunn/vader.vim'
-Plug 'leafgarland/typescript-vim'
 Plug 'lifepillar/vim-solarized8'
 Plug 'mhinz/vim-grepper'
 Plug 'tpope/vim-abolish'
@@ -140,7 +138,6 @@ let g:ale_linters = {
     \ 'go': 'all',
     \ 'python': 'all',
     \ 'text': 'all',
-    \ 'typescript': 'all',
     \}
 
 function! s:Errors()
