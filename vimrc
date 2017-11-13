@@ -227,11 +227,16 @@ nnoremap <silent> g# :let @/='\C' . expand('<cword>')<CR>:let v:searchforward=0<
 
 " UI.
 "
+" Background color mode.
+set background=dark
 " Guide lines.
 set colorcolumn=80
 " Color scheme.
 try
-    colorscheme solarized8_dark_flat
+    colorscheme solarized8_flat
+    if has('termguicolors')
+        set termguicolors
+    endif
 catch /^Vim\%((\a\+)\)\=:E185/
     colorscheme slate
 endtry
