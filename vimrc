@@ -37,10 +37,8 @@ else
 endif
 
 Plug 'Chiel92/vim-autoformat'
-Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'SirVer/ultisnips'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'embear/vim-localvimrc'
 Plug 'junegunn/vader.vim'
 Plug 'lifepillar/vim-solarized8'
@@ -67,24 +65,6 @@ call plug#end()
 "   `g:localvimrc_debug` instead.
 let g:localvimrc_ask = 0
 let g:localvimrc_sandbox = 0
-
-
-" Fuzzy file finder.
-"
-let g:ctrlp_by_filename = 1
-let g:ctrlp_cmd = 'CtrlPMixed'
-let g:ctrlp_map = '<C-f>'
-let g:ctrlp_match_current_file = 1
-let g:ctrlp_match_func = {'match': 'pymatcher#PyMatch'}
-let g:ctrlp_max_files = 0
-let g:ctrlp_mruf_relative = 1
-let g:ctrlp_switch_buffer = 0
-let g:ctrlp_working_path_mode = 'w'
-
-if executable('ag')
-    let g:ctrlp_use_caching = 0
-    let g:ctrlp_user_command = 'ag -l --nocolor -g "" %s'
-endif
 
 
 " QuickFix window rectifications.
