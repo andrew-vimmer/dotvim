@@ -34,7 +34,6 @@ if has('nvim')
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
     Plug 'Shougo/neocomplete.vim'
-    Plug 'Shougo/vimproc.vim', { 'do' : 'make' }
 endif
 
 Plug 'Chiel92/vim-autoformat'
