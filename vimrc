@@ -120,6 +120,7 @@ let g:ale_linters = {
 
 function! s:Errors()
     update
+    setlocal cursorcolumn
     setlocal list
     setlocal spell
     if g:loaded_ale
@@ -129,6 +130,7 @@ endfunction
 command! Errors :call <SID>Errors()
 
 function! s:Reset()
+    setlocal nocursorcolumn
     setlocal nolist
     setlocal nospell
     if g:loaded_ale
