@@ -172,6 +172,9 @@ set incsearch
 set smartcase
 
 " Global search operators.
+let g:grepper = {}
+let g:grepper.tools = ['rg', 'ag', 'grep']
+
 nmap gs <Plug>(GrepperOperator)
 xmap gs <Plug>(GrepperOperator)
 
