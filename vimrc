@@ -5,8 +5,6 @@ augroup vimrc
     autocmd!
 augroup END
 
-" File encodings.
-set fileencodings=ucs-bom,utf-8,default,cp1251,latin1
 " No time out for mappings in order to improve stability on remote terminals.
 set notimeout nottimeout
 
