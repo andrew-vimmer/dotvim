@@ -9,8 +9,6 @@ augroup END
 set fileencodings=ucs-bom,utf-8,default,cp1251,latin1
 " No time out for mappings in order to improve stability for remote terminals.
 set notimeout nottimeout
-" Not using auto to suppress a SEGV while working on large files.
-set regexpengine=2
 
 " Leader key mapping.
 let g:mapleader = ','
