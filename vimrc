@@ -99,12 +99,6 @@ augroup END
 let g:ale_enabled = 0
 let g:ale_open_list = 1
 
-let g:ale_linters = {
-    \ 'go': 'all',
-    \ 'python': 'all',
-    \ 'text': 'all',
-    \}
-
 function! s:Errors()
     update
     setlocal colorcolumn=79
