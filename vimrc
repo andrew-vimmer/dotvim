@@ -26,7 +26,6 @@ vnoremap s <ESC>:update<CR>gv
 "
 call plug#begin()
 
-Plug 'Chiel92/vim-autoformat'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'SirVer/ultisnips'
@@ -74,11 +73,6 @@ let g:deoplete#enable_at_startup = 1
 " Text snippets.
 "
 let g:UltiSnipsSnippetDirectories = ['UltiSnips', '.']
-
-
-" Automatic formatting.
-"
-let g:autoformat_autoindent = 0
 
 
 " Spelling.
