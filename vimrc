@@ -30,14 +30,9 @@ vnoremap s <ESC>:update<CR>gv
 "
 call plug#begin()
 
-if has('nvim')
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-    Plug 'Shougo/neocomplete.vim'
-endif
-
 Plug 'Chiel92/vim-autoformat'
 Plug 'Lokaltog/vim-easymotion'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'SirVer/ultisnips'
 Plug 'embear/vim-localvimrc'
 Plug 'lifepillar/vim-solarized8'
