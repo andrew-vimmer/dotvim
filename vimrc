@@ -119,6 +119,7 @@ let g:ale_linters = {
 
 function! s:Errors()
     update
+    setlocal colorcolumn=79
     setlocal cursorcolumn
     setlocal list
     setlocal spell
@@ -129,6 +130,7 @@ endfunction
 command! Errors :call <SID>Errors()
 
 function! s:Reset()
+    setlocal colorcolumn=
     setlocal nocursorcolumn
     setlocal nolist
     setlocal nospell
