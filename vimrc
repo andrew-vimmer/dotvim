@@ -70,9 +70,6 @@ let g:qfenter_keymap.topen = ['<C-t>']
 "
 let g:deoplete#enable_at_startup = 1
 
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-
 
 " Text snippets.
 "
