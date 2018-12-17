@@ -26,9 +26,9 @@ vnoremap s <ESC>:update<CR>gv
 "
 call plug#begin()
 
-Plug 'Lokaltog/vim-easymotion'
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'SirVer/ultisnips'
+Plug 'easymotion/vim-easymotion'
 Plug 'embear/vim-localvimrc'
 Plug 'lifepillar/vim-solarized8'
 Plug 'mhinz/vim-grepper'
