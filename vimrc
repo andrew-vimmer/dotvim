@@ -27,7 +27,7 @@ vnoremap s <ESC>:update<CR>gv
 call plug#begin()
 
 Plug 'Lokaltog/vim-easymotion'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'SirVer/ultisnips'
 Plug 'embear/vim-localvimrc'
 Plug 'lifepillar/vim-solarized8'
@@ -92,7 +92,8 @@ augroup END
 "
 let g:ale_enabled = 0
 let g:ale_lint_on_text_changed = 'never'
-let g:ale_linters = {'go': ['gometalinter']}
+let g:ale_linters = {}
+let g:ale_linters.go = ['gometalinter']
 let g:ale_open_list = 1
 
 function! s:Errors()
