@@ -226,6 +226,8 @@ try
 catch /^Vim\%((\a\+)\)\=:E185/
     colorscheme slate
 endtry
+" Suppress vertical separators.
+set fillchars=vert:\ |
 " Characters to use in `list` mode.
 set listchars=tab:‧\ ,eol:¬
 " Minimal number of screen lines visible above/below cursor.
