@@ -88,13 +88,16 @@ augroup vimrc_spelling
 augroup END
 
 
-" Error checking.
+" Error checking and LSP client.
 "
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_linters = {}
-let g:ale_linters.go = ['gometalinter']
+let g:ale_linters.go = ['gometalinter', 'golangserver']
 let g:ale_set_highlights=0
 let g:ale_set_signs=0
+
+nmap <C-]> <Plug>(ale_go_to_definition)
+nmap <Leader>t <Plug>(ale_hover)
 
 
 function! s:ToggleRulerBuffer() abort
