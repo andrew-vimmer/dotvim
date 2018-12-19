@@ -113,7 +113,6 @@ function! s:ToggleRulerBuffer() abort
         setlocal nospell
         setlocal nolist
     endif
-    redraw!
 endfunction
 command! ToggleRulerBuffer call <SID>ToggleRulerBuffer()
 
