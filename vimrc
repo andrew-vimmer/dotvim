@@ -96,39 +96,12 @@ let g:ale_linters.go = ['gometalinter']
 let g:ale_set_highlights=0
 let g:ale_set_signs=0
 
-function! s:ALEToggleBackground() abort
-    let l:buffer = bufnr('')
-    let l:info = get(g:ale_buffer_info, l:buffer, {'loclist': []})
-    let l:loclist = filter(copy(l:info.loclist), 'v:val.bufnr == l:buffer')
-
-    if empty(l:loclist)
-        return
-    endif
-
-    let g:ale_background_mode = !get(g:, 'ale_background_mode')
-
-    if g:ale_background_mode
-        call ale#engine#SetResults(l:buffer, [])
-        let g:ale_set_signs=0
-        let g:ale_set_highlights=0
-    else
-        let g:ale_set_signs=1
-        let g:ale_set_highlights=1
-        call ale#engine#SetResults(l:buffer, l:loclist)
-    endif
-endfunction
-command! ALEToggleBackground :call <SID>ALEToggleBackground()
-
 function! s:Errors()
     update
     setlocal colorcolumn=79
     setlocal cursorcolumn
     setlocal list
     setlocal spell
-    if g:loaded_ale
-        let g:ale_background_mode=1
-        call <SID>ALEToggleBackground()
-    endif
 endfunction
 command! Errors :call <SID>Errors()
 
@@ -137,10 +110,6 @@ function! s:Reset()
     setlocal nocursorcolumn
     setlocal nolist
     setlocal nospell
-    if g:loaded_ale
-        let g:ale_background_mode=0
-        call <SID>ALEToggleBackground()
-    endif
     redraw!
 endfunction
 command! Reset :nohlsearch|call <SID>Reset()
