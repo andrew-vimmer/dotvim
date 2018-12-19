@@ -96,28 +96,26 @@ let g:ale_linters.go = ['gometalinter']
 let g:ale_set_highlights=0
 let g:ale_set_signs=0
 
-function! s:Errors()
-    setlocal colorcolumn=79
-    setlocal cursorcolumn
-    setlocal list
-    setlocal spell
-endfunction
-command! Errors :call <SID>Errors()
 
-function! s:Reset()
-    setlocal colorcolumn=
-    setlocal nocursorcolumn
-    setlocal nolist
-    setlocal nospell
+function! s:ToggleRulerBuffer() abort
+    let b:vimrc_ruler = !get(b:, 'vimrc_ruler', 0)
+    if b:vimrc_ruler
+        setlocal colorcolumn=79
+        setlocal cursorcolumn
+        setlocal list
+        setlocal spell
+    else
+        setlocal colorcolumn=
+        setlocal nocursorcolumn
+        setlocal nospell
+        setlocal nolist
+    endif
     redraw!
 endfunction
-command! Reset :nohlsearch|call <SID>Reset()
+command! ToggleRulerBuffer :nohlsearch|call <SID>ToggleRulerBuffer()
 
-nnoremap <Leader>e :Errors<CR>
-vnoremap <Leader>e <ESC>:Errors<CR>gv
-
-nnoremap <Leader>r :Reset<CR>
-vnoremap <Leader>r <ESC>:Reset<CR>gv
+nnoremap <Leader>r :ToggleRulerBuffer<CR>
+vnoremap <Leader>r <ESC>:ToggleRulerBuffer<CR>gv
 
 
 " Advanced motion operators.
