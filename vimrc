@@ -97,7 +97,6 @@ let g:ale_set_highlights=0
 let g:ale_set_signs=0
 
 function! s:Errors()
-    update
     setlocal colorcolumn=79
     setlocal cursorcolumn
     setlocal list
