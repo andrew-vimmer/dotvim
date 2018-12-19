@@ -192,8 +192,8 @@ try
 catch /^Vim\%((\a\+)\)\=:E185/
     colorscheme slate
 endtry
-" Suppress vertical separators.
-set fillchars=vert:\ |
+" Suppress vertical separators and empty line markers at the end of a buffer.
+set fillchars=vert:\ ,eob:\ |
 " Characters to use in `list` mode.
 set listchars=tab:‧\ ,eol:¬
 " Minimal number of screen lines visible above/below cursor.
