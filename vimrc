@@ -21,6 +21,11 @@ nnoremap s :update<CR>
 " Simplified saving in visual mode.
 vnoremap s <ESC>:update<CR>gv
 
+" Simplified search reset in normal mode.
+nmap <Leader><Leader> :nohlsearch<CR>
+" Simplified search reset in visual mode.
+vmap <Leader><Leader> :nohlsearch<CR>
+
 
 " Enable plugins.
 "
