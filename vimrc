@@ -97,7 +97,7 @@ let g:ale_set_highlights=0
 let g:ale_set_signs=0
 
 nmap <C-]> <Plug>(ale_go_to_definition)
-nmap <Leader>t <Plug>(ale_hover)
+nmap <Leader>d <Plug>(ale_hover)
 
 
 function! s:ToggleRulerBuffer() abort
