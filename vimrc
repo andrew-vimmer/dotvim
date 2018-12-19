@@ -115,7 +115,7 @@ function! s:ToggleRulerBuffer() abort
     endif
     redraw!
 endfunction
-command! ToggleRulerBuffer :nohlsearch|call <SID>ToggleRulerBuffer()
+command! ToggleRulerBuffer call <SID>ToggleRulerBuffer()
 
 nnoremap <Leader>r :ToggleRulerBuffer<CR>
 vnoremap <Leader>r <ESC>:ToggleRulerBuffer<CR>gv
