@@ -22,9 +22,9 @@ nnoremap s :update<CR>
 vnoremap s <ESC>:update<CR>gv
 
 " Simplified search reset in normal mode.
-nmap <Leader><Leader> :nohlsearch<CR>
+nnoremap <Leader><Leader> :nohlsearch<CR>
 " Simplified search reset in visual mode.
-vmap <Leader><Leader> :nohlsearch<CR>
+vnoremap <Leader><Leader> <ESC>:nohlsearch<CR>gv
 
 
 " Enable plugins.
@@ -95,6 +95,7 @@ augroup END
 
 " Error checking and LSP client.
 "
+let g:ale_fixers = {'go': ['gofmt']}
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_linters = {}
 let g:ale_linters.go = ['gometalinter', 'golangserver']
