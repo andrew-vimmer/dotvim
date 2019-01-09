@@ -98,7 +98,7 @@ augroup END
 let g:ale_fixers = {'go': ['gofmt']}
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_linters = {}
-let g:ale_linters.go = ['gobuild', 'gometalinter', 'golangserver']
+let g:ale_linters.go = ['gobuild', 'golangserver']
 let g:ale_set_highlights=0
 let g:ale_set_signs=0
 
