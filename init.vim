@@ -50,15 +50,7 @@ call plug#end()
 
 " Local configuration discovery.
 "
-" NOTE:
-"   The settings make all local configuration files be loaded without asking or
-"   being sandboxed. The reason for such behaviour is that there are plenty of
-"   ways to achieve persistence on the system, so I find default
-"   settings redundant. If you'd like to debug issues arising from local
-"   configuration files, revert these to default or use the
-"   `g:localvimrc_debug` instead.
 let g:localvimrc_ask = 0
-let g:localvimrc_sandbox = 0
 
 
 " QuickFix window rectifications.
