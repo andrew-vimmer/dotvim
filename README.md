@@ -1,6 +1,7 @@
 # Installation
-Required packages: git neovim
-Optional packages: python2 python3 pip pip3
+Required packages: `git` `neovim`
+
+Optional packages: `python2` `python3` `pip` `pip3`
 
 ```sh
 command -v pip && pip install --user pynvim
