@@ -16,11 +16,6 @@ nnoremap ; :
 " Simplified command prompt access in visual mode.
 vnoremap ; :
 
-" Simplified saving in normal mode.
-nnoremap s :update<CR>
-" Simplified saving in visual mode.
-vnoremap s <ESC>:update<CR>gv
-
 " Simplified search reset in normal mode.
 nnoremap <Leader><Leader> :nohlsearch<CR>
 " Simplified search reset in visual mode.
