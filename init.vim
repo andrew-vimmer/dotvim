@@ -194,8 +194,6 @@ set fillchars=vert:\ ,eob:\ |
 set listchars=tab:‧\ ,eol:¬
 " Minimal number of screen lines visible above/below cursor.
 set scrolloff=3
-" Disable screen flickering on bell character.
-set visualbell t_vb=
 " Display all matching files on tab completion.
 set wildmenu
 
