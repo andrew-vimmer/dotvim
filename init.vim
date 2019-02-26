@@ -155,7 +155,6 @@ xmap gs <Plug>(GrepperOperator)
 function! s:VisualStarSearchSet(cmdtype)
     let l:temp = @"
     normal! gvy
-
     let @" = escape(@", a:cmdtype.'\*')
     let @/ = substitute(@", '\n', '\\n', 'g')
     let @/ = substitute(@/, '\[', '\\[', 'g')
