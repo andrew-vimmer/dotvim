@@ -188,8 +188,6 @@ set fillchars=vert:\ ,eob:\ |
 set listchars=tab:‧\ ,eol:¬
 " Minimal number of screen lines visible above/below cursor.
 set scrolloff=3
-" Display all matching files on tab completion.
-set wildmenu
 
 " Automatically close preview window when completion is done.
 autocmd vimrc CompleteDone * silent! pclose
