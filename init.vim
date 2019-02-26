@@ -78,10 +78,6 @@ augroup vimrc_spelling
     autocmd!
     " Git commit messages.
     autocmd BufRead *.git/COMMIT_EDITMSG setlocal spell
-    " Mercurial commit messages.
-    autocmd BufRead *hg-editor* setlocal spell
-    " Perforce commit messages.
-    autocmd BufRead /tmp/tmp.*.* setlocal spell
 augroup END
 
 
