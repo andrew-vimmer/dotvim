@@ -235,8 +235,6 @@ inoremap <C-w> <C-g>u<C-w>
 " Break undo sequence on delete backward line.
 inoremap <C-u> <C-g>u<C-u>
 
-" Yank to the end of a line instead of being a `yy` alias.
-nmap Y y$
 " Retain cursor position when yanking from visual mode.
 vmap y ygv<ESC>
 " Visually select changed or pasted text.
