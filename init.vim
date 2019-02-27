@@ -144,9 +144,6 @@ xmap gs <Plug>(GrepperOperator)
 
 
 " Copy from `https://github.com/bronson/vim-visual-star-search`.
-"
-" The reason why not the plugin itself is used here is that it sets an
-" undesired mapping, which is hard to override.
 function! s:VisualStarSearchSet(cmdtype)
     let l:temp = @"
     normal! gvy
