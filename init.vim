@@ -38,7 +38,6 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
 Plug 'w0rp/ale'
-Plug 'yssl/QFEnter'
 
 call plug#end()
 
@@ -46,15 +45,6 @@ call plug#end()
 " Local configuration discovery.
 "
 let g:localvimrc_ask = 0
-
-
-" QuickFix window rectifications.
-"
-let g:qfenter_keymap = {}
-let g:qfenter_keymap.open = ['<CR>', '<2-LeftMouse>']
-let g:qfenter_keymap.vopen = ['<C-v>']
-let g:qfenter_keymap.hopen = ['<C-CR>', '<C-s>', '<C-x>']
-let g:qfenter_keymap.topen = ['<C-t>']
 
 
 " Context free word completion.
