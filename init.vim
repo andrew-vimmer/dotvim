@@ -68,6 +68,23 @@ vnoremap K :m '<-2<CR>gv
 " Increase indentation level of selected lines and retain selection.
 vnoremap L >gv
 
+" Suppress vertical separators and empty line markers at the end of a buffer.
+set fillchars=vert:\ ,eob:\ |
+" Characters to use in `list` mode.
+set listchars=tab:‧\ ,eol:¬
+" Minimal number of screen lines visible above/below cursor.
+set scrolloff=3
+
+" Automatically close preview window when completion is done.
+autocmd vimrc CompleteDone * silent! pclose
+" Automatically resize splits.
+autocmd vimrc VimResized * wincmd =
+
+" Status line.
+set statusline=%m%w\ %f
+" Show always.
+set laststatus=2
+
 " Enable plugins.
 call plug#begin()
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
@@ -83,6 +100,18 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
 Plug 'w0rp/ale'
 call plug#end()
+
+" Background color mode.
+set background=dark
+" Color scheme.
+try
+    colorscheme solarized8_flat
+    if has('termguicolors')
+        set termguicolors
+    endif
+catch /^Vim\%((\a\+)\)\=:E185/
+    colorscheme slate
+endtry
 
 " Local configuration discovery.
 let g:localvimrc_ask = 0
@@ -172,30 +201,3 @@ nnoremap <silent> g* :let @/='\C' . expand('<cword>')<CR>:let v:searchforward=1<
 nnoremap <silent> # :let @/='\C\<' . expand('<cword>') . '\>'<CR>:let v:searchforward=0<CR>n
 nnoremap <silent> g# :let @/='\C' . expand('<cword>')<CR>:let v:searchforward=0<CR>n
 
-" Background color mode.
-set background=dark
-" Color scheme.
-try
-    colorscheme solarized8_flat
-    if has('termguicolors')
-        set termguicolors
-    endif
-catch /^Vim\%((\a\+)\)\=:E185/
-    colorscheme slate
-endtry
-" Suppress vertical separators and empty line markers at the end of a buffer.
-set fillchars=vert:\ ,eob:\ |
-" Characters to use in `list` mode.
-set listchars=tab:‧\ ,eol:¬
-" Minimal number of screen lines visible above/below cursor.
-set scrolloff=3
-
-" Automatically close preview window when completion is done.
-autocmd vimrc CompleteDone * silent! pclose
-" Automatically resize splits.
-autocmd vimrc VimResized * wincmd =
-
-" Status line.
-set statusline=%m%w\ %f
-" Show always.
-set laststatus=2
