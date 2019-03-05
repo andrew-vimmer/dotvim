@@ -27,8 +27,6 @@ set shiftwidth=4
 
 " Searches are case insensitive.
 set ignorecase
-" Matches are shown as soon as the pattern is being typed.
-set incsearch
 " If pattern contains upper case characters search becomes case sensitive.
 set smartcase
 
