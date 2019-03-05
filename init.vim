@@ -25,8 +25,6 @@ set softtabstop=4
 " The number of spaces indentation stands for.
 set shiftwidth=4
 
-" Highlight previous search matches.
-set hlsearch
 " Searches are case insensitive.
 set ignorecase
 " Matches are shown as soon as the pattern is being typed.
