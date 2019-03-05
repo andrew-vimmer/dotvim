@@ -16,11 +16,6 @@ nnoremap ; :
 " Simplified command prompt access in visual mode.
 vnoremap ; :
 
-" Simplified search reset in normal mode.
-nnoremap <Leader><Leader> :nohlsearch<CR>
-" Simplified search reset in visual mode.
-vnoremap <Leader><Leader> <ESC>:nohlsearch<CR>gv
-
 " <TAB> characters will be shown as this number of spaces.
 set tabstop=4
 " <TAB> press will produce spaces instead of actual tabs.
@@ -29,6 +24,20 @@ set expandtab
 set softtabstop=4
 " The number of spaces indentation stands for.
 set shiftwidth=4
+
+" Highlight previous search matches.
+set hlsearch
+" Searches are case insensitive.
+set ignorecase
+" Matches are shown as soon as the pattern is being typed.
+set incsearch
+" If pattern contains upper case characters search becomes case sensitive.
+set smartcase
+
+" Simplified search reset in normal mode.
+nnoremap <Leader><Leader> :nohlsearch<CR>
+" Simplified search reset in visual mode.
+vnoremap <Leader><Leader> <ESC>:nohlsearch<CR>gv
 
 " Line breaks cannot be removed in insert mode.
 set backspace=indent,start
@@ -137,15 +146,6 @@ let g:EasyMotion_use_smartsign_us = 1
 nmap <Space> <Plug>(easymotion-sn)
 omap <Space> <Plug>(easymotion-tn)
 vmap <Space> <Plug>(easymotion-tn)
-
-" Highlight previous search matches.
-set hlsearch
-" Searches are case insensitive.
-set ignorecase
-" Matches are shown as soon as the pattern is being typed.
-set incsearch
-" If pattern contains upper case characters search becomes case sensitive.
-set smartcase
 
 " Global search operators.
 let g:grepper = {}
