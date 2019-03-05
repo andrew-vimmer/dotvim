@@ -138,7 +138,6 @@ let g:ale_set_highlights=0
 let g:ale_set_signs=0
 
 nmap <C-]> <Plug>(ale_go_to_definition)
-nmap <Leader>d <Plug>(ale_hover)
 
 function! s:ToggleRulerBuffer() abort
     let b:vimrc_ruler = !get(b:, 'vimrc_ruler', 0)
