@@ -43,17 +43,12 @@ call plug#end()
 
 
 " Local configuration discovery.
-"
 let g:localvimrc_ask = 0
 
-
 " Context free word completion.
-"
 let g:deoplete#enable_at_startup = 1
 
-
 " Text snippets.
-"
 let g:UltiSnipsSnippetDirectories = ['UltiSnips', '.']
 
 
@@ -100,7 +95,6 @@ vnoremap <Leader>r <ESC>:ToggleRulerBuffer<CR>gv
 
 
 " Advanced motion operators.
-"
 let g:EasyMotion_add_search_history = 0
 let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_do_shade = 0
@@ -113,9 +107,6 @@ nmap <Space> <Plug>(easymotion-sn)
 omap <Space> <Plug>(easymotion-tn)
 vmap <Space> <Plug>(easymotion-tn)
 
-
-" Searching.
-"
 " Highlight previous search matches.
 set hlsearch
 " Searches are case insensitive.
@@ -131,7 +122,6 @@ let g:grepper.tools = ['rg', 'ag', 'grep']
 
 nmap gs <Plug>(GrepperOperator)
 xmap gs <Plug>(GrepperOperator)
-
 
 " Copy from `https://github.com/bronson/vim-visual-star-search`.
 function! s:VisualStarSearchSet(cmdtype)
@@ -155,9 +145,6 @@ nnoremap <silent> g* :let @/='\C' . expand('<cword>')<CR>:let v:searchforward=1<
 nnoremap <silent> # :let @/='\C\<' . expand('<cword>') . '\>'<CR>:let v:searchforward=0<CR>n
 nnoremap <silent> g# :let @/='\C' . expand('<cword>')<CR>:let v:searchforward=0<CR>n
 
-
-" UI.
-"
 " Background color mode.
 set background=dark
 " Color scheme.
@@ -181,16 +168,11 @@ autocmd vimrc CompleteDone * silent! pclose
 " Automatically resize splits.
 autocmd vimrc VimResized * wincmd =
 
-
 " Status line.
-"
 set statusline=%m%w\ %f
 " Show always.
 set laststatus=2
 
-
-" Spaces and Tabs.
-"
 " <TAB> characters will be shown as this number of spaces.
 set tabstop=4
 " <TAB> press will produce spaces instead of actual tabs.
@@ -200,9 +182,6 @@ set softtabstop=4
 " The number of spaces indentation stands for.
 set shiftwidth=4
 
-
-" Editing.
-"
 " Line breaks cannot be removed in insert mode.
 set backspace=indent,start
 " Break undo sequence on carriage return.
