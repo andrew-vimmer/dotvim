@@ -16,10 +16,10 @@ nnoremap ; :
 " Simplified command prompt access in visual mode.
 vnoremap ; :
 
-" <TAB> characters will be shown as this number of spaces.
-set tabstop=4
 " <TAB> press will produce spaces instead of actual tabs.
 set expandtab
+" <TAB> characters will be shown as this number of spaces.
+set tabstop=4
 " <TAB> press will produces this number of spaces.
 set softtabstop=4
 " The number of spaces indentation stands for.
