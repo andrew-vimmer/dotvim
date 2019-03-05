@@ -21,11 +21,50 @@ nnoremap <Leader><Leader> :nohlsearch<CR>
 " Simplified search reset in visual mode.
 vnoremap <Leader><Leader> <ESC>:nohlsearch<CR>gv
 
+" <TAB> characters will be shown as this number of spaces.
+set tabstop=4
+" <TAB> press will produce spaces instead of actual tabs.
+set expandtab
+" <TAB> press will produces this number of spaces.
+set softtabstop=4
+" The number of spaces indentation stands for.
+set shiftwidth=4
+
+" Line breaks cannot be removed in insert mode.
+set backspace=indent,start
+" Break undo sequence on carriage return.
+inoremap <CR> <C-g>u<CR>
+" Break undo sequence on delete backward word.
+inoremap <C-w> <C-g>u<C-w>
+" Break undo sequence on delete backward line.
+inoremap <C-u> <C-g>u<C-u>
+
+" Visually select changed or pasted text.
+nnoremap <expr> gp '`['.strpart(getregtype(), 0, 1).'`]'
+
+" Remap join to `M` for Merge.
+nnoremap M J
+" Move line under cursor downwards.
+nnoremap J :m .+1<CR>
+" Increase indentation level of the line under cursor.
+nnoremap H <<
+" Move line under cursor upwards.
+nnoremap K :m .-2<CR>
+" Decrease indentation level of the line under cursor.
+nnoremap L >>
+" Remap visual join to `M` for Merge.
+vnoremap M v_J
+" Move selected lines downwards and retain selection.
+vnoremap J :m '>+1<CR>gv
+" Decrease indentation level of selected lines and retain selection.
+vnoremap H <gv
+" Move selected lines upwards and retain selection.
+vnoremap K :m '<-2<CR>gv
+" Increase indentation level of selected lines and retain selection.
+vnoremap L >gv
 
 " Enable plugins.
-"
 call plug#begin()
-
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'SirVer/ultisnips'
 Plug 'easymotion/vim-easymotion'
@@ -38,9 +77,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
 Plug 'w0rp/ale'
-
 call plug#end()
-
 
 " Local configuration discovery.
 let g:localvimrc_ask = 0
@@ -51,18 +88,14 @@ let g:deoplete#enable_at_startup = 1
 " Text snippets.
 let g:UltiSnipsSnippetDirectories = ['UltiSnips', '.']
 
-
 " Spelling.
-"
 augroup vimrc_spelling
     autocmd!
     " Git commit messages.
     autocmd BufRead *.git/COMMIT_EDITMSG setlocal spell
 augroup END
 
-
 " Error checking and LSP client.
-"
 let g:ale_fixers = {'go': ['gofmt']}
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_linters = {}
@@ -72,7 +105,6 @@ let g:ale_set_signs=0
 
 nmap <C-]> <Plug>(ale_go_to_definition)
 nmap <Leader>d <Plug>(ale_hover)
-
 
 function! s:ToggleRulerBuffer() abort
     let b:vimrc_ruler = !get(b:, 'vimrc_ruler', 0)
@@ -92,7 +124,6 @@ command! ToggleRulerBuffer call <SID>ToggleRulerBuffer()
 
 nnoremap <Leader>r :ToggleRulerBuffer<CR>
 vnoremap <Leader>r <ESC>:ToggleRulerBuffer<CR>gv
-
 
 " Advanced motion operators.
 let g:EasyMotion_add_search_history = 0
@@ -172,45 +203,3 @@ autocmd vimrc VimResized * wincmd =
 set statusline=%m%w\ %f
 " Show always.
 set laststatus=2
-
-" <TAB> characters will be shown as this number of spaces.
-set tabstop=4
-" <TAB> press will produce spaces instead of actual tabs.
-set expandtab
-" <TAB> press will produces this number of spaces.
-set softtabstop=4
-" The number of spaces indentation stands for.
-set shiftwidth=4
-
-" Line breaks cannot be removed in insert mode.
-set backspace=indent,start
-" Break undo sequence on carriage return.
-inoremap <CR> <C-g>u<CR>
-" Break undo sequence on delete backward word.
-inoremap <C-w> <C-g>u<C-w>
-" Break undo sequence on delete backward line.
-inoremap <C-u> <C-g>u<C-u>
-
-" Visually select changed or pasted text.
-nnoremap <expr> gp '`['.strpart(getregtype(), 0, 1).'`]'
-
-" Remap join to `M` for Merge.
-nnoremap M J
-" Move line under cursor downwards.
-nnoremap J :m .+1<CR>
-" Increase indentation level of the line under cursor.
-nnoremap H <<
-" Move line under cursor upwards.
-nnoremap K :m .-2<CR>
-" Decrease indentation level of the line under cursor.
-nnoremap L >>
-" Remap visual join to `M` for Merge.
-vnoremap M v_J
-" Move selected lines downwards and retain selection.
-vnoremap J :m '>+1<CR>gv
-" Decrease indentation level of selected lines and retain selection.
-vnoremap H <gv
-" Move selected lines upwards and retain selection.
-vnoremap K :m '<-2<CR>gv
-" Increase indentation level of selected lines and retain selection.
-vnoremap L >gv
