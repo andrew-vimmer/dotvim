@@ -134,8 +134,6 @@ let g:ale_lint_on_text_changed = 'never'
 let g:ale_set_highlights=0
 let g:ale_set_signs=0
 
-nmap <C-]> <Plug>(ale_go_to_definition)
-
 function! s:ToggleRulerBuffer() abort
     let b:vimrc_ruler = !get(b:, 'vimrc_ruler', 0)
     if b:vimrc_ruler
