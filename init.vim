@@ -157,7 +157,6 @@ vnoremap <Leader>r <ESC>:ToggleRulerBuffer<CR>gv
 " Advanced motion operators.
 let g:EasyMotion_add_search_history = 0
 let g:EasyMotion_do_mapping = 0
-let g:EasyMotion_do_shade = 0
 let g:EasyMotion_keys = 'fjdksla;ghrueiwoqptybvncm,x.z/'
 let g:EasyMotion_move_highlight = 0
 let g:EasyMotion_off_screen_search = 0
