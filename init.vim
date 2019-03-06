@@ -115,6 +115,7 @@ endtry
 
 " Local configuration discovery.
 let g:localvimrc_ask = 0
+let g:localvimrc_sandbox = 0
 
 " Context free word completion.
 let g:deoplete#enable_at_startup = 1
