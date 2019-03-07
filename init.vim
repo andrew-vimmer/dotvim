@@ -89,6 +89,7 @@ set laststatus=2
 call plug#begin()
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'SirVer/ultisnips'
+Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
 Plug 'easymotion/vim-easymotion'
 Plug 'embear/vim-localvimrc'
 Plug 'lifepillar/vim-solarized8'
