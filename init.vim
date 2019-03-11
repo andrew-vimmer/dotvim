@@ -94,10 +94,8 @@ function! s:ToggleRulerBuffer() abort
         setlocal nolist
     endif
 endfunction
-command! ToggleRulerBuffer call <SID>ToggleRulerBuffer()
 
-nnoremap <Leader><Leader> :ToggleRulerBuffer<CR>
-vnoremap <Leader><Leader> <ESC>:ToggleRulerBuffer<CR>gv
+nnoremap <Leader><Leader> :call <SID>ToggleRulerBuffer()<CR>
 
 " Enable plugins.
 call plug#begin()
