@@ -67,8 +67,6 @@ vnoremap L >gv
 set fillchars=vert:\ ,eob:\ |
 " Characters to use in `list` mode.
 set listchars=tab:‧\ ,eol:¬
-" Minimal number of screen lines visible above/below cursor.
-set scrolloff=3
 
 " Automatically close preview window when completion is done.
 autocmd vimrc CompleteDone * silent! pclose
