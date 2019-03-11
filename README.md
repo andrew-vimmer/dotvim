@@ -16,7 +16,7 @@ command -v git \
 ## Golang
 ```vim
 if &ft ==# 'go'
-    set noexpandtab
+    setlocal noexpandtab
     let g:ale_fixers = get(g:, 'ale_fixers', {})
     let g:ale_fixers.go = ['gofmt']
     let g:ale_linters = get(g:, 'ale_linters', {})
