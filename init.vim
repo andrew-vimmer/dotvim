@@ -30,11 +30,6 @@ set ignorecase
 " If pattern contains upper case characters search becomes case sensitive.
 set smartcase
 
-" Simplified search reset in normal mode.
-nnoremap <Leader><Leader> :nohlsearch<CR>
-" Simplified search reset in visual mode.
-vnoremap <Leader><Leader> <ESC>:nohlsearch<CR>gv
-
 " Line breaks cannot be removed in insert mode.
 set backspace=indent,start
 " Break undo sequence on carriage return.
