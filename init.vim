@@ -65,16 +65,13 @@ vnoremap L >gv
 set fillchars=vert:\ ,eob:\ |
 " Characters to use in `list` mode.
 set listchars=tab:‧\ ,eol:¬
+" Status line shows modified, preview flag and file path, and is shown always.
+set statusline=%m%w\ %f laststatus=2
 
 " Automatically close preview window when completion is done.
 autocmd vimrc CompleteDone * silent! pclose
 " Automatically resize splits.
 autocmd vimrc VimResized * wincmd =
-
-" Status line.
-set statusline=%m%w\ %f
-" Show always.
-set laststatus=2
 
 function! s:ToggleRulerBuffer() abort
     let b:vimrc_ruler = !get(b:, 'vimrc_ruler', 0)
