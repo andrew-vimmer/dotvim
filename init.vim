@@ -25,10 +25,8 @@ set softtabstop=4
 " The number of spaces indentation stands for.
 set shiftwidth=4
 
-" Searches are case insensitive.
-set ignorecase
-" If pattern contains upper case characters search becomes case sensitive.
-set smartcase
+" Searches are case insensitive unless pattern contains upper case characters.
+set ignorecase smartcase
 
 " Line breaks cannot be removed in insert mode.
 set backspace=indent,start
