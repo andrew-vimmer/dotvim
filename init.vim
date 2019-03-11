@@ -80,6 +80,25 @@ set statusline=%m%w\ %f
 " Show always.
 set laststatus=2
 
+function! s:ToggleRulerBuffer() abort
+    let b:vimrc_ruler = !get(b:, 'vimrc_ruler', 0)
+    if b:vimrc_ruler
+        setlocal colorcolumn=79
+        setlocal cursorcolumn
+        setlocal list
+        setlocal spell
+    else
+        setlocal colorcolumn=
+        setlocal nocursorcolumn
+        setlocal nospell
+        setlocal nolist
+    endif
+endfunction
+command! ToggleRulerBuffer call <SID>ToggleRulerBuffer()
+
+nnoremap <Leader><Leader> :ToggleRulerBuffer<CR>
+vnoremap <Leader><Leader> <ESC>:ToggleRulerBuffer<CR>gv
+
 " Enable plugins.
 call plug#begin()
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
@@ -130,25 +149,6 @@ augroup END
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_set_highlights=0
 let g:ale_set_signs=0
-
-function! s:ToggleRulerBuffer() abort
-    let b:vimrc_ruler = !get(b:, 'vimrc_ruler', 0)
-    if b:vimrc_ruler
-        setlocal colorcolumn=79
-        setlocal cursorcolumn
-        setlocal list
-        setlocal spell
-    else
-        setlocal colorcolumn=
-        setlocal nocursorcolumn
-        setlocal nospell
-        setlocal nolist
-    endif
-endfunction
-command! ToggleRulerBuffer call <SID>ToggleRulerBuffer()
-
-nnoremap <Leader>r :ToggleRulerBuffer<CR>
-vnoremap <Leader>r <ESC>:ToggleRulerBuffer<CR>gv
 
 " Advanced motion operators.
 let g:EasyMotion_add_search_history = 0
