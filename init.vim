@@ -110,11 +110,7 @@ call plug#end()
 " Color scheme.
 set background=dark
 set termguicolors
-try
-    colorscheme solarized8_flat
-catch /^Vim\%((\a\+)\)\=:E185/
-    colorscheme slate
-endtry
+colorscheme solarized8_flat
 
 " Local configuration discovery.
 let g:localvimrc_ask = 0
