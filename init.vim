@@ -107,14 +107,11 @@ Plug 'tpope/vim-vinegar'
 Plug 'w0rp/ale'
 call plug#end()
 
-" Background color mode.
-set background=dark
 " Color scheme.
+set background=dark
+set termguicolors
 try
     colorscheme solarized8_flat
-    if has('termguicolors')
-        set termguicolors
-    endif
 catch /^Vim\%((\a\+)\)\=:E185/
     colorscheme slate
 endtry
