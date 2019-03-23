@@ -122,12 +122,8 @@ autocmd vimrc InsertEnter * call deoplete#enable()
 " Text snippets.
 let g:UltiSnipsSnippetDirectories = ['UltiSnips', '.']
 
-" Spelling.
-augroup vimrc_spelling
-    autocmd!
-    " Git commit messages.
-    autocmd BufRead *.git/COMMIT_EDITMSG setlocal spell
-augroup END
+" Spelling for Git commit messages.
+autocmd vimrc BufRead *.git/COMMIT_EDITMSG setlocal spell
 
 " Error checking and LSP client.
 let g:ale_lint_on_text_changed = 'never'
