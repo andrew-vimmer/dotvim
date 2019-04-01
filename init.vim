@@ -22,10 +22,8 @@ set softtabstop=4
 set shiftwidth=4
 " Searches are case insensitive unless pattern contains upper case characters.
 set ignorecase smartcase
-" Suppress vertical separators and empty line markers at the end of a buffer.
-set fillchars=vert:\ ,eob:\ |
-" Characters to use in `list` mode.
-set listchars=tab:‧\ ,eol:¬
+" Character markers.
+set fillchars=vert:\ ,eob:\  listchars=tab:‧\ ,eol:¬
 " Status line shows modified, preview flag and file path, and is shown always.
 set statusline=%m%w\ %f laststatus=2
 " Line breaks cannot be removed in insert mode.
