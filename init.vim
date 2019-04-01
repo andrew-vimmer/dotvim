@@ -24,7 +24,6 @@ set tabstop=4
 set softtabstop=4
 " The number of spaces indentation stands for.
 set shiftwidth=4
-
 " Searches are case insensitive unless pattern contains upper case characters.
 set ignorecase smartcase
 
@@ -135,7 +134,6 @@ let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_keys = 'fjdksla;ghrueiwoqptybvncm,x.z/'
 let g:EasyMotion_off_screen_search = 0
 let g:EasyMotion_use_smartsign_us = 1
-
 nmap <Space> <Plug>(easymotion-sn)
 omap <Space> <Plug>(easymotion-tn)
 vmap <Space> <Plug>(easymotion-tn)
@@ -143,7 +141,6 @@ vmap <Space> <Plug>(easymotion-tn)
 " Global search operators.
 let g:grepper = {}
 let g:grepper.tools = ['rg', 'grep']
-
 nmap gs <Plug>(GrepperOperator)
 xmap gs <Plug>(GrepperOperator)
 
@@ -157,7 +154,6 @@ function! s:VisualStarSearchSet(cmdtype)
     let @/ = substitute(@/, '\~', '\\~', 'g')
     let @" = l:temp
 endfunction
-
 " Forward search visually selected text using `*` command.
 xnoremap <silent> * :<C-u>call <SID>VisualStarSearchSet('/')<CR>/<C-R>=@/<CR><CR>N
 " Backward search visually selected text using `#` command.
