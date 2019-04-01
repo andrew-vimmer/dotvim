@@ -8,9 +8,6 @@ augroup END
 " No time out for mappings in order to improve stability on remote terminals.
 set notimeout nottimeout
 
-" Leader key mapping.
-let g:mapleader = ','
-
 " Simplified command prompt access in normal mode.
 nnoremap ; :
 " Simplified command prompt access in visual mode.
@@ -71,6 +68,9 @@ set statusline=%m%w\ %f laststatus=2
 autocmd vimrc CompleteDone * silent! pclose
 " Automatically resize splits.
 autocmd vimrc VimResized * wincmd =
+
+" Leader key mapping.
+let g:mapleader = ','
 
 function! s:ToggleRulerBuffer() abort
     let b:vimrc_ruler = !get(b:, 'vimrc_ruler', 0)
