@@ -35,7 +35,6 @@ inoremap <C-u> <C-g>u<C-u>
 
 " Visually select changed or pasted text.
 nnoremap <expr> gp '`['.strpart(getregtype(), 0, 1).'`]'
-
 " Remap join to `M` for Merge.
 nnoremap M J
 " Move line under cursor downwards.
