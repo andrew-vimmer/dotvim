@@ -5,14 +5,13 @@ augroup vimrc
     autocmd!
 augroup END
 
-" No time out for mappings in order to improve stability on remote terminals.
-set notimeout nottimeout
-
 " Simplified command prompt access in normal mode.
 nnoremap ; :
 " Simplified command prompt access in visual mode.
 vnoremap ; :
 
+" No time out for mappings in order to improve stability on remote terminals.
+set notimeout nottimeout
 " <TAB> press will produce spaces instead of actual tabs.
 set expandtab
 " <TAB> characters will be shown as this number of spaces.
@@ -23,7 +22,12 @@ set softtabstop=4
 set shiftwidth=4
 " Searches are case insensitive unless pattern contains upper case characters.
 set ignorecase smartcase
-
+" Suppress vertical separators and empty line markers at the end of a buffer.
+set fillchars=vert:\ ,eob:\ |
+" Characters to use in `list` mode.
+set listchars=tab:‧\ ,eol:¬
+" Status line shows modified, preview flag and file path, and is shown always.
+set statusline=%m%w\ %f laststatus=2
 " Line breaks cannot be removed in insert mode.
 set backspace=indent,start
 " Break undo sequence on carriage return.
@@ -56,13 +60,6 @@ vnoremap H <gv
 vnoremap K :m '<-2<CR>gv
 " Increase indentation level of selected lines and retain selection.
 vnoremap L >gv
-
-" Suppress vertical separators and empty line markers at the end of a buffer.
-set fillchars=vert:\ ,eob:\ |
-" Characters to use in `list` mode.
-set listchars=tab:‧\ ,eol:¬
-" Status line shows modified, preview flag and file path, and is shown always.
-set statusline=%m%w\ %f laststatus=2
 
 " Automatically close preview window when completion is done.
 autocmd vimrc CompleteDone * silent! pclose
