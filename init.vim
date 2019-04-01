@@ -10,8 +10,6 @@ nnoremap ; :
 " Simplified command prompt access in visual mode.
 vnoremap ; :
 
-" No time out for mappings in order to improve stability on remote terminals.
-set notimeout nottimeout
 " <TAB> press will produce spaces instead of actual tabs.
 set expandtab
 " <TAB> characters will be shown as this number of spaces.
