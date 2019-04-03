@@ -16,16 +16,16 @@ command -v git \
 ## Golang
 ```vim
 if &ft ==# 'go'
-    setlocal noexpandtab
+    setl ts=8 sts=8 sw=8 noex
     let g:ale_fixers = get(g:, 'ale_fixers', {})
     let g:ale_fixers.go = ['gofmt']
     let g:ale_linters = get(g:, 'ale_linters', {})
     let g:ale_linters.go = ['gobuild']
     let g:LanguageClient_serverCommands = get(g:, 'LanguageClient_serverCommands', {})
     let g:LanguageClient_serverCommands.go = ['go-langserver', '-gocodecompletion']
-    nmap <buffer> <silent> <C-]> :call LanguageClient#textDocument_definition()<CR>
-    nnoremap <buffer> <silent> <Leader>f :call LanguageClient#textDocument_references()<CR>
-    nnoremap <buffer> <silent> <Leader>d :call LanguageClient#textDocument_hover()<CR>
+    nm <buffer> <silent> <C-]> :call LanguageClient#textDocument_definition()<CR>
+    nn <buffer> <silent> <Leader>f :call LanguageClient#textDocument_references()<CR>
+    nn <buffer> <silent> <Leader>d :call LanguageClient#textDocument_hover()<CR>
 endif
 ```
 
