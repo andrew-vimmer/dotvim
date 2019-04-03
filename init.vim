@@ -52,8 +52,6 @@ vnoremap L >gv
 
 " Automatically close preview window when completion is done.
 autocmd vimrc CompleteDone * silent! pclose
-" Automatically resize splits.
-autocmd vimrc VimResized * wincmd =
 
 " Leader key mapping.
 let g:mapleader = ','
