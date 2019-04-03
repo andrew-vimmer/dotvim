@@ -10,14 +10,8 @@ nnoremap ; :
 " Simplified command prompt access in visual mode.
 vnoremap ; :
 
-" <TAB> press will produce spaces instead of actual tabs.
-set expandtab
-" <TAB> characters will be shown as this number of spaces.
-set tabstop=4
-" <TAB> press will produces this number of spaces.
-set softtabstop=4
-" The number of spaces indentation stands for.
-set shiftwidth=4
+" <TAB> will produce spaces and will be shown as 4 spaces.
+set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 " Searches are case insensitive unless pattern contains upper case characters.
 set ignorecase smartcase
 " Character markers.
