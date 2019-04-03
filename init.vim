@@ -109,8 +109,6 @@ autocmd vimrc BufRead *.git/COMMIT_EDITMSG setlocal spell
 
 " Error checking and LSP client.
 let g:ale_lint_on_text_changed = 'never'
-let g:ale_set_highlights=0
-let g:ale_set_signs=0
 
 " Advanced motion operators.
 let g:EasyMotion_add_search_history = 0
