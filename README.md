@@ -17,6 +17,7 @@ command -v git \
 ```vim
 if &ft ==# 'go'
     setl ts=8 sts=8 sw=8 noex
+    let g:ale_fix_on_save = 1
     let g:ale_fixers = get(g:, 'ale_fixers', {})
     let g:ale_fixers.go = ['gofmt']
     let g:ale_linters = get(g:, 'ale_linters', {})
