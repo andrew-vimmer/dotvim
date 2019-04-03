@@ -103,7 +103,6 @@ set termguicolors
 colorscheme solarized8_flat
 
 " Local configuration discovery.
-let g:localvimrc_ask = 0
 let g:localvimrc_sandbox = 0
 
 " Context free word completion.
