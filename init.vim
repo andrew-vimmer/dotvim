@@ -11,7 +11,7 @@ nnoremap ; :
 vnoremap ; :
 
 " <TAB> will produce spaces and will be shown as 4 spaces.
-set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+set tabstop=4 shiftwidth=4 expandtab
 " Searches are case insensitive unless pattern contains upper case characters.
 set ignorecase smartcase
 " Character markers.
