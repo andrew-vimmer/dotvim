@@ -16,7 +16,7 @@ command -v git \
 ## Golang
 ```vim
 if &ft ==# 'go'
-    setl ts=8 sts=8 sw=8 noet
+    setl ts=8 sw=8 noet
     let g:ale_fix_on_save = 1
     let g:ale_fixers = get(g:, 'ale_fixers', {})
     let g:ale_fixers.go = ['gofmt']
@@ -33,7 +33,7 @@ endif
 ## YAML
 ```vim
 if &ft ==# 'yaml' || &ft ==# 'json'
-    setl ts=2 sts=2 sw=2
+    setl ts=2 sw=2
     let g:LanguageClient_serverCommands = get(g:, 'LanguageClient_serverCommands', {})
     let g:LanguageClient_serverCommands.yaml = ['yaml-language-server', '--stdio']
     let settings = json_decode('
