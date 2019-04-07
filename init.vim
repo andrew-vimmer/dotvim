@@ -114,7 +114,6 @@ let g:ale_lint_on_text_changed = 'never'
 let g:EasyMotion_add_search_history = 0
 let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_keys = 'fjdksla;ghrueiwoqptybvncm,x.z/'
-let g:EasyMotion_off_screen_search = 0
 let g:EasyMotion_use_smartsign_us = 1
 nmap <Space> <Plug>(easymotion-sn)
 omap <Space> <Plug>(easymotion-tn)
