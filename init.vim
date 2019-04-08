@@ -75,7 +75,6 @@ nnoremap <silent> <Leader><Leader> :call <SID>ToggleRulerBuffer()<CR>
 " Enable plugins.
 call plug#begin()
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
-Plug 'SirVer/ultisnips'
 Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
 Plug 'easymotion/vim-easymotion'
 Plug 'embear/vim-localvimrc'
@@ -100,9 +99,6 @@ let g:localvimrc_sandbox = 0
 
 " Context free word completion.
 autocmd vimrc InsertEnter * call deoplete#enable()
-
-" Text snippets.
-let g:UltiSnipsSnippetDirectories = ['UltiSnips', '.']
 
 " Spelling for Git commit messages.
 autocmd vimrc BufRead *.git/COMMIT_EDITMSG setlocal spell
