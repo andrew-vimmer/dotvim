@@ -18,12 +18,6 @@ set ignorecase smartcase
 set fillchars=vert:\ ,eob:\  listchars=tab:‧\ ,eol:¬
 " Status line shows modified, preview flag and file path, and is shown always.
 set statusline=%m%w\ %f laststatus=2
-" Break undo sequence on carriage return.
-inoremap <CR> <C-g>u<CR>
-" Break undo sequence on delete backward word.
-inoremap <C-w> <C-g>u<C-w>
-" Break undo sequence on delete backward line.
-inoremap <C-u> <C-g>u<C-u>
 
 " Visually select changed or pasted text.
 nnoremap <expr> gp '`['.strpart(getregtype(), 0, 1).'`]'
