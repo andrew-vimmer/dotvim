@@ -18,8 +18,6 @@ set ignorecase smartcase
 set fillchars=vert:\ ,eob:\  listchars=tab:‧\ ,eol:¬
 " Status line shows modified, preview flag and file path, and is shown always.
 set statusline=%m%w\ %f laststatus=2
-" Line breaks cannot be removed in insert mode.
-set backspace=indent,start
 " Break undo sequence on carriage return.
 inoremap <CR> <C-g>u<CR>
 " Break undo sequence on delete backward word.
