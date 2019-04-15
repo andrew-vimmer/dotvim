@@ -42,9 +42,6 @@ vnoremap K :m '<-2<CR>gv
 " Increase indentation level of selected lines and retain selection.
 vnoremap L >gv
 
-" Automatically close preview window when completion is done.
-autocmd vimrc CompleteDone * silent! pclose
-
 " Leader key mapping.
 let g:mapleader = ','
 
@@ -91,6 +88,8 @@ let g:localvimrc_sandbox = 0
 
 " Context free word completion.
 autocmd vimrc InsertEnter * call deoplete#enable()
+" Automatically close preview window when completion is done.
+autocmd vimrc CompleteDone * silent! pclose
 
 " Spelling for Git commit messages.
 autocmd vimrc BufRead *.git/COMMIT_EDITMSG setlocal spell
