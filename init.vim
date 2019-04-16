@@ -5,9 +5,8 @@ augroup vimrc
     autocmd!
 augroup END
 
-" Simplified command prompt access in normal mode.
+" Simplified command prompt access in normal and visual modes.
 nnoremap ; :
-" Simplified command prompt access in visual mode.
 vnoremap ; :
 
 " <TAB> will produce spaces and will be shown as 4 spaces.
