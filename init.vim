@@ -46,15 +46,9 @@ let g:mapleader = ','
 function! s:ToggleRulerBuffer() abort
     let b:vimrc_ruler = !get(b:, 'vimrc_ruler', 0)
     if b:vimrc_ruler
-        setlocal colorcolumn=79
-        setlocal cursorcolumn
-        setlocal list
-        setlocal spell
+        setlocal colorcolumn=79 cursorcolumn list spell
     else
-        setlocal colorcolumn=
-        setlocal nocursorcolumn
-        setlocal nospell
-        setlocal nolist
+        setlocal nospell nolist nocursorcolumn colorcolumn=
     endif
 endfunction
 nnoremap <silent> <Leader>* :call <SID>ToggleRulerBuffer()<CR>
