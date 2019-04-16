@@ -98,7 +98,7 @@ let g:grepper.tools = ['rg', 'grep']
 nmap gs <Plug>(GrepperOperator)
 xmap gs <Plug>(GrepperOperator)
 
-" Copy from `https://github.com/bronson/vim-visual-star-search`.
+" https://github.com/bronson/vim-visual-star-search
 function! s:VisualStarSearchSet(cmdtype)
     let l:temp = @"
     normal! gvy
@@ -108,6 +108,5 @@ function! s:VisualStarSearchSet(cmdtype)
     let @/ = substitute(@/, '\~', '\\~', 'g')
     let @" = l:temp
 endfunction
-" Forward and backward search visually selected text.
 xnoremap <silent> * :<C-u>call <SID>VisualStarSearchSet('/')<CR>/<C-R>=@/<CR><CR>
 xnoremap <silent> # :<C-u>call <SID>VisualStarSearchSet('?')<CR>?<C-R>=@/<CR><CR>
