@@ -52,6 +52,19 @@ function! s:ToggleRulerBuffer() abort
 endfunction
 nnoremap <silent> <Leader>* :call <SID>ToggleRulerBuffer()<CR>
 
+" https://github.com/bronson/vim-visual-star-search
+function! s:VisualStarSearchSet(cmdtype)
+    let l:temp = @"
+    normal! gvy
+    let @" = escape(@", a:cmdtype.'\*')
+    let @/ = substitute(@", '\n', '\\n', 'g')
+    let @/ = substitute(@/, '\[', '\\[', 'g')
+    let @/ = substitute(@/, '\~', '\\~', 'g')
+    let @" = l:temp
+endfunction
+xnoremap <silent> * :<C-u>call <SID>VisualStarSearchSet('/')<CR>/<C-R>=@/<CR><CR>
+xnoremap <silent> # :<C-u>call <SID>VisualStarSearchSet('?')<CR>?<C-R>=@/<CR><CR>
+
 " Enable plugins.
 call plug#begin()
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
@@ -97,16 +110,3 @@ let g:grepper = {}
 let g:grepper.tools = ['rg', 'grep']
 nmap gs <Plug>(GrepperOperator)
 xmap gs <Plug>(GrepperOperator)
-
-" https://github.com/bronson/vim-visual-star-search
-function! s:VisualStarSearchSet(cmdtype)
-    let l:temp = @"
-    normal! gvy
-    let @" = escape(@", a:cmdtype.'\*')
-    let @/ = substitute(@", '\n', '\\n', 'g')
-    let @/ = substitute(@/, '\[', '\\[', 'g')
-    let @/ = substitute(@/, '\~', '\\~', 'g')
-    let @" = l:temp
-endfunction
-xnoremap <silent> * :<C-u>call <SID>VisualStarSearchSet('/')<CR>/<C-R>=@/<CR><CR>
-xnoremap <silent> # :<C-u>call <SID>VisualStarSearchSet('?')<CR>?<C-R>=@/<CR><CR>
