@@ -116,7 +116,6 @@ function! s:VisualStarSearchSet(cmdtype)
     let @/ = substitute(@/, '\~', '\\~', 'g')
     let @" = l:temp
 endfunction
-" Forward search visually selected text using `*` command.
+" Forward and backward search visually selected text.
 xnoremap <silent> * :<C-u>call <SID>VisualStarSearchSet('/')<CR>/<C-R>=@/<CR><CR>
-" Backward search visually selected text using `#` command.
 xnoremap <silent> # :<C-u>call <SID>VisualStarSearchSet('?')<CR>?<C-R>=@/<CR><CR>
