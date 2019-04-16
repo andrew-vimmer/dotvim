@@ -94,9 +94,6 @@ autocmd vimrc CompleteDone * silent! pclose
 " Spelling for Git commit messages.
 autocmd vimrc BufRead *.git/COMMIT_EDITMSG setlocal spell
 
-" Error checking and LSP client.
-let g:ale_lint_on_text_changed = 'never'
-
 " Advanced motion operators.
 let g:EasyMotion_add_search_history = 0
 let g:EasyMotion_keys = 'fjdksla;ghrueiwoqptybvncm,x.z/'
