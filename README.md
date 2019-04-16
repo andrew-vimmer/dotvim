@@ -40,7 +40,7 @@ if &ft ==# 'yaml' || &ft ==# 'json'
     let settings = json_decode('
     \{
     \    "yaml": {
-    \        "completion": true,
+    \        "completion": false,
     \        "hover": true,
     \        "validate": true,
     \        "schemas": {
