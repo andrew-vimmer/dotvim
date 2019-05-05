@@ -99,7 +99,6 @@ autocmd vimrc BufRead *.git/COMMIT_EDITMSG setlocal spell
 
 " Advanced motion operators.
 let g:EasyMotion_add_search_history = 0
-let g:EasyMotion_keys = 'fjdksla;ghrueiwoqptybvncm,x.z/'
 let g:EasyMotion_smartcase = 1
 nmap <Space> <Plug>(easymotion-sn)
 omap <Space> <Plug>(easymotion-tn)
