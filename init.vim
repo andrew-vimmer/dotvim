@@ -89,7 +89,6 @@ let g:localvimrc_sandbox = 0
 autocmd vimrc InsertEnter * call deoplete#enable()
 " Automatically close preview window when completion is done.
 autocmd vimrc CompleteDone * silent! pclose
-
 " Spelling for Git commit messages.
 autocmd vimrc BufRead *.git/COMMIT_EDITMSG setlocal spell
 
