@@ -78,7 +78,6 @@ Plug 'tpope/vim-vinegar'
 Plug 'w0rp/ale'
 call plug#end()
 
-set background=dark
 set termguicolors
 colorscheme solarized8_flat
 
