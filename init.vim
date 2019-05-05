@@ -14,7 +14,7 @@ set tabstop=4 shiftwidth=4 expandtab
 " Character markers.
 set fillchars=vert:\ ,eob:\  listchars=tab:‧\ ,eol:¬
 " Status line shows modified, preview flag and file path, and is shown always.
-set statusline=%m%w\ %f laststatus=2
+set statusline=%m%w\ %f
 
 " Visually select changed or pasted text.
 nnoremap <expr> gp '`['.strpart(getregtype(), 0, 1).'`]'
