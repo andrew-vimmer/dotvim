@@ -100,7 +100,6 @@ omap <Space> <Plug>(easymotion-tn)
 vmap <Space> <Plug>(easymotion-tn)
 
 " Global search operators.
-let g:grepper = {}
-let g:grepper.tools = ['rg', 'grep']
+let g:grepper = {'tools': ['rg', 'grep']}
 nmap gs <Plug>(GrepperOperator)
 xmap gs <Plug>(GrepperOperator)
