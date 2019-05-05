@@ -39,9 +39,6 @@ vnoremap K :m '<-2<CR>gv
 " Increase indentation level of selected lines and retain selection.
 vnoremap L >gv
 
-" Leader key mapping.
-let g:mapleader = ','
-
 function! s:ToggleRulerBuffer() abort
     let b:vimrc_ruler = !get(b:, 'vimrc_ruler', 0)
     if b:vimrc_ruler
