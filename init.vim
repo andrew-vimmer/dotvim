@@ -20,23 +20,18 @@ set statusline=%m%w\ %f
 nnoremap <expr> gp '`['.strpart(getregtype(), 0, 1).'`]'
 " Remap join to `M` for Merge.
 nnoremap M J
-" Move line under cursor downwards.
-nnoremap J :m .+1<CR>
-" Increase indentation level of the line under cursor.
-nnoremap H <<
-" Move line under cursor upwards.
-nnoremap K :m .-2<CR>
-" Decrease indentation level of the line under cursor.
-nnoremap L >>
-" Remap visual join to `M` for Merge.
 vnoremap M v_J
-" Move selected lines downwards and retain selection.
+" Move selected lines or the line under cursor downwards.
+nnoremap J :m .+1<CR>
 vnoremap J :m '>+1<CR>gv
-" Decrease indentation level of selected lines and retain selection.
-vnoremap H <gv
-" Move selected lines upwards and retain selection.
+" Move selected lines or the line under cursor upwards.
+nnoremap K :m .-2<CR>
 vnoremap K :m '<-2<CR>gv
-" Increase indentation level of selected lines and retain selection.
+" Increase indentation level of selected lines or the line under cursor.
+nnoremap H <<
+vnoremap H <gv
+" Decrease indentation level of selected lines or the line under cursor.
+nnoremap L >>
 vnoremap L >gv
 
 function! s:ToggleRulerBuffer() abort
