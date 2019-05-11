@@ -60,7 +60,7 @@ if &ft ==# 'yaml' || &ft ==# 'json'
             \ 'workspace/didChangeConfiguration', {'settings': settings})
     aug END
     nn <buffer> <silent> <Leader>f :call LanguageClient#textDocument_formatting()<CR>
-    nn <buffer> <silent> <Leader>d :call LanguageClient#textDocument_hover()<CR>
+    nn <buffer> <silent> <Leader>h :call LanguageClient#textDocument_hover()<CR>
 endif
 ```
 
