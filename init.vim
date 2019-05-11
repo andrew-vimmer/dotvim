@@ -18,21 +18,6 @@ set statusline=%m%w\ %f
 
 " Visually select changed or pasted text.
 nnoremap <expr> gp '`['.strpart(getregtype(), 0, 1).'`]'
-" Remap join to `M` for Merge.
-nnoremap M J
-vnoremap M v_J
-" Move selected lines or the line under cursor downwards.
-nnoremap J :m .+1<CR>
-vnoremap J :m '>+1<CR>gv
-" Move selected lines or the line under cursor upwards.
-nnoremap K :m .-2<CR>
-vnoremap K :m '<-2<CR>gv
-" Increase indentation level of selected lines or the line under cursor.
-nnoremap H <<
-vnoremap H <gv
-" Decrease indentation level of selected lines or the line under cursor.
-nnoremap L >>
-vnoremap L >gv
 
 function! s:ToggleRulerBuffer() abort
     let b:vimrc_ruler = !get(b:, 'vimrc_ruler', 0)
