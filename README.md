@@ -26,8 +26,8 @@ if &ft ==# 'go'
     let g:LanguageClient_serverCommands = get(g:, 'LanguageClient_serverCommands', {})
     let g:LanguageClient_serverCommands.go = ['go-langserver', '-gocodecompletion']
     nm <buffer> <silent> <C-]> :call LanguageClient#textDocument_definition()<CR>
+    nn <buffer> <silent> K :call LanguageClient#textDocument_hover()<CR>
     nn <buffer> <silent> <Leader>r :call LanguageClient#textDocument_references()<CR>
-    nn <buffer> <silent> <Leader>h :call LanguageClient#textDocument_hover()<CR>
 endif
 ```
 
@@ -60,7 +60,7 @@ if &ft ==# 'yaml' || &ft ==# 'json'
             \ 'workspace/didChangeConfiguration', {'settings': settings})
     aug END
     nn <buffer> <silent> <Leader>f :call LanguageClient#textDocument_formatting()<CR>
-    nn <buffer> <silent> <Leader>h :call LanguageClient#textDocument_hover()<CR>
+    nn <buffer> <silent> K :call LanguageClient#textDocument_hover()<CR>
 endif
 ```
 
