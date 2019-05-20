@@ -5,10 +5,6 @@ augroup vimrc
     autocmd!
 augroup END
 
-" Simplified command prompt access in normal and visual modes.
-nnoremap ; :
-vnoremap ; :
-
 " <TAB> will produce spaces and will be shown as 4 spaces.
 set tabstop=4 shiftwidth=4 expandtab
 " Character markers.
