@@ -47,8 +47,6 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'mhinz/vim-grepper'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
 Plug 'w0rp/ale'
 call plug#end()
