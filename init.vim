@@ -8,7 +8,7 @@ augroup END
 " <TAB> will produce spaces and will be shown as 4 spaces.
 set tabstop=4 shiftwidth=4 expandtab
 " Character markers.
-set fillchars=vert:\ ,eob:\  listchars=tab:‧\ ,eol:¬
+set fillchars=vert:\ ,eob:\ ,diff:\  listchars=tab:‧\ ,eol:¬
 " Status line shows modified, preview flag and file path, and is shown always.
 set statusline=%m%w\ %f
 
