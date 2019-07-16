@@ -1,9 +1,5 @@
 scriptencoding utf-8
 
-augroup vimrc
-    autocmd!
-augroup END
-
 set tabstop=4 shiftwidth=4 expandtab
 set fillchars=vert:\ ,eob:\ ,diff:\  listchars=tab:‧\ ,eol:¬
 set statusline=%m%w\ %f
@@ -39,8 +35,11 @@ colorscheme solarized8_flat
 let g:localvimrc_persistent = 1
 let g:localvimrc_sandbox = 0
 
-autocmd vimrc InsertEnter * call deoplete#enable()
-autocmd vimrc BufRead *.git/COMMIT_EDITMSG setlocal spell
+augroup vimrc
+    autocmd!
+    autocmd BufRead *.git/COMMIT_EDITMSG setlocal spell
+    autocmd InsertEnter * call deoplete#enable()
+augroup END
 
 let g:EasyMotion_add_search_history = 0
 let g:EasyMotion_smartcase = 1
