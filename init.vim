@@ -1,18 +1,13 @@
 scriptencoding utf-8
 
-" Define a host group for the configuration script.
 augroup vimrc
     autocmd!
 augroup END
 
-" <TAB> will produce spaces and will be shown as 4 spaces.
 set tabstop=4 shiftwidth=4 expandtab
-" Character markers.
 set fillchars=vert:\ ,eob:\ ,diff:\  listchars=tab:‧\ ,eol:¬
-" Status line shows modified, preview flag and file path, and is shown always.
 set statusline=%m%w\ %f
 
-" Visually select changed or pasted text.
 nnoremap <expr> gp '`['.strpart(getregtype(), 0, 1).'`]'
 
 function! s:ToggleRulerBuffer() abort
@@ -41,23 +36,18 @@ call plug#end()
 set termguicolors
 colorscheme solarized8_flat
 
-" Local configuration discovery.
 let g:localvimrc_persistent = 1
 let g:localvimrc_sandbox = 0
 
-" Context free word completion.
 autocmd vimrc InsertEnter * call deoplete#enable()
-" Spelling for Git commit messages.
 autocmd vimrc BufRead *.git/COMMIT_EDITMSG setlocal spell
 
-" Advanced motion operators.
 let g:EasyMotion_add_search_history = 0
 let g:EasyMotion_smartcase = 1
 nmap <Space> <Plug>(easymotion-sn)
 omap <Space> <Plug>(easymotion-tn)
 vmap <Space> <Plug>(easymotion-tn)
 
-" Global search operators.
 let g:grepper = {'tools': ['rg', 'grep']}
 nmap gs <Plug>(GrepperOperator)
 xmap gs <Plug>(GrepperOperator)
