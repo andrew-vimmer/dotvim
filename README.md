@@ -19,7 +19,7 @@ if &ft ==# 'go'
     setl ts=8 sw=8 noet
     let g:ale_fix_on_save = 1
     let g:ale_fixers = get(g:, 'ale_fixers', {})
-    let g:ale_fixers.go = ['gofmt']
+    let g:ale_fixers.go = ['goimports']
     let g:ale_lint_on_text_changed = 'never'
     let g:ale_linters = get(g:, 'ale_linters', {})
     let g:ale_linters.go = ['gobuild']
