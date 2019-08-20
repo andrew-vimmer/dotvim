@@ -20,7 +20,6 @@ command -v git \
 ## Golang
 ```vim
 if &ft ==# 'go'
-	setl ts=8 sw=8 noet
 	let g:ale_fix_on_save = 1
 	let g:ale_fixers = get(g:, 'ale_fixers', {})
 	let g:ale_fixers.go = ['goimports']
