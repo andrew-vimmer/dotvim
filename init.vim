@@ -6,12 +6,12 @@ set statusline=%m%w\ %f
 nnoremap <expr> gp '`['.strpart(getregtype(), 0, 1).'`]'
 
 function! s:ToggleRulerBuffer() abort
-    let b:vimrc_ruler = !get(b:, 'vimrc_ruler', 0)
-    if b:vimrc_ruler
-        setlocal colorcolumn=79 cursorcolumn list spell
-    else
-        setlocal nospell nolist nocursorcolumn colorcolumn=
-    endif
+	let b:vimrc_ruler = !get(b:, 'vimrc_ruler', 0)
+	if b:vimrc_ruler
+		setlocal colorcolumn=79 cursorcolumn list spell
+	else
+		setlocal nospell nolist nocursorcolumn colorcolumn=
+	endif
 endfunction
 nnoremap <silent> <Leader>* :call <SID>ToggleRulerBuffer()<CR>
 
@@ -35,9 +35,9 @@ let g:localvimrc_persistent = 1
 let g:localvimrc_sandbox = 0
 
 augroup vimrc
-    autocmd!
-    autocmd BufRead *.git/COMMIT_EDITMSG setlocal spell
-    autocmd InsertEnter * call deoplete#enable()
+	autocmd!
+	autocmd BufRead *.git/COMMIT_EDITMSG setlocal spell
+	autocmd InsertEnter * call deoplete#enable()
 augroup END
 
 let g:EasyMotion_add_search_history = 0
