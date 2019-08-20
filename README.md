@@ -37,7 +37,7 @@ endif
 ## YAML
 ```vim
 if &ft ==# 'yaml' || &ft ==# 'json'
-	setl ts=2 sw=2
+	setl ts=2 sw=2 et
 	let g:LanguageClient_serverCommands = get(g:, 'LanguageClient_serverCommands', {})
 	let g:LanguageClient_serverCommands.yaml = ['yaml-language-server', '--stdio']
 	let settings = json_decode('
