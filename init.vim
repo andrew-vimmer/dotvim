@@ -1,6 +1,5 @@
 scriptencoding utf-8
 
-set tabstop=4 shiftwidth=4 expandtab
 set fillchars=vert:\ ,eob:\ ,diff:\  listchars=tab:‧\ ,eol:¬
 set statusline=%m%w\ %f
 
