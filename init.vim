@@ -19,6 +19,7 @@ nnoremap <silent> <Leader>* :call <SID>ToggleRulerBuffer()<CR>
 call plug#begin()
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
+Plug 'dense-analysis/ale'
 Plug 'easymotion/vim-easymotion'
 Plug 'embear/vim-localvimrc'
 Plug 'lifepillar/vim-solarized8'
@@ -26,7 +27,6 @@ Plug 'mhinz/vim-grepper'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-vinegar'
-Plug 'w0rp/ale'
 call plug#end()
 
 set termguicolors
