@@ -1,6 +1,7 @@
 scriptencoding utf-8
 
 set fillchars=vert:\ ,eob:\ ,diff:\  listchars=tab:‧\ ,eol:¬
+set mouse=nv
 set statusline=%m%w\ %f
 
 nnoremap <expr> gp '`['.strpart(getregtype(), 0, 1).'`]'
@@ -19,7 +20,6 @@ call plug#begin()
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
 Plug 'dense-analysis/ale'
-Plug 'easymotion/vim-easymotion'
 Plug 'embear/vim-localvimrc'
 Plug 'lifepillar/vim-solarized8'
 Plug 'mhinz/vim-grepper'
@@ -39,12 +39,6 @@ augroup vimrc
 	autocmd BufRead *.git/COMMIT_EDITMSG setlocal spell
 	autocmd InsertEnter * call deoplete#enable()
 augroup END
-
-let g:EasyMotion_add_search_history = 0
-let g:EasyMotion_smartcase = 1
-nmap <Space> <Plug>(easymotion-sn)
-omap <Space> <Plug>(easymotion-tn)
-vmap <Space> <Plug>(easymotion-tn)
 
 let g:grepper = {'tools': ['rg', 'grep']}
 nmap gs <Plug>(GrepperOperator)
