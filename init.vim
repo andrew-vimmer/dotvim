@@ -1,7 +1,7 @@
 scriptencoding utf-8
 
 set fillchars=vert:\ ,eob:\ ,diff:\  listchars=tab:‧\ ,eol:¬
-set mouse=nv
+set mouse=a
 set statusline=%m%w\ %f
 
 nnoremap <expr> gp '`['.strpart(getregtype(), 0, 1).'`]'
