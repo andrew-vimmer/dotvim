@@ -33,37 +33,3 @@ if &ft ==# 'go'
 	nn <buffer> <silent> <Leader>r :call LanguageClient#textDocument_references()<CR>
 endif
 ```
-
-## YAML
-```vim
-if &ft ==# 'yaml' || &ft ==# 'json'
-	setl ts=2 sw=2 et
-	let g:LanguageClient_serverCommands = get(g:, 'LanguageClient_serverCommands', {})
-	let g:LanguageClient_serverCommands.yaml = ['yaml-language-server', '--stdio']
-	let settings = json_decode('
-	\{
-	\	 "yaml": {
-	\		 "completion": false,
-	\		 "hover": true,
-	\		 "validate": true,
-	\		 "schemas": {
-	\			 "Kubernetes": "/*"
-	\		 },
-	\		 "format": {
-	\			 "enable": true
-	\		 }
-	\	 },
-	\	 "http": {
-	\		 "proxyStrictSSL": true
-	\	 }
-	\}')
-	aug LanguageClient_config
-		au!
-		au User LanguageClientStarted call LanguageClient#Notify(
-			\ 'workspace/didChangeConfiguration', {'settings': settings})
-	aug END
-	nn <buffer> <silent> <Leader>f :call LanguageClient#textDocument_formatting()<CR>
-	nn <buffer> <silent> K :call LanguageClient#textDocument_hover()<CR>
-endif
-```
-
