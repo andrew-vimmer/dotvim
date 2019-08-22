@@ -8,6 +8,7 @@ Plug 'embear/vim-localvimrc'
 Plug 'lifepillar/vim-solarized8'
 Plug 'mhinz/vim-grepper'
 Plug 'michaeljsmith/vim-indent-object'
+Plug 'tbodt/deoplete-tabnine', {'do': 'bash install.sh'}
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-vinegar'
 call plug#end()
