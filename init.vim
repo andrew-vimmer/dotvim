@@ -19,15 +19,6 @@ set statusline=%m%w\ %f
 set termguicolors
 colorscheme solarized8_flat
 
-function! s:ToggleRulerBuffer() abort
-	let b:vimrc_ruler = !get(b:, 'vimrc_ruler', 0)
-	if b:vimrc_ruler
-		setlocal colorcolumn=79 cursorcolumn list spell
-	else
-		setlocal nospell nolist nocursorcolumn colorcolumn=
-	endif
-endfunction
-nnoremap <silent> <Leader>* :call <SID>ToggleRulerBuffer()<CR>
 nnoremap <expr> gp '`['.strpart(getregtype(), 0, 1).'`]'
 
 let g:localvimrc_persistent = 1
