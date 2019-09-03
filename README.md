@@ -30,5 +30,48 @@ if &ft ==# 'go'
 	nm <buffer> <silent> <C-]> :call LanguageClient#textDocument_definition()<CR>
 	nn <buffer> <silent> K :call LanguageClient#textDocument_hover()<CR>
 	nn <buffer> <silent> <Leader>r :call LanguageClient#textDocument_references()<CR>
+	nn <buffer> <silent> <Leader>i :call LanguageClient#textDocument_implementation()<CR>
+endif
+```
+
+## Python
+```vim
+if &ft ==# 'python'
+	setl ts=4 sw=4 et
+	let g:ale_lint_on_text_changed = 'never'
+	let g:ale_linters = get(g:, 'ale_linters', {})
+	let g:ale_linters.go = ['pylama']
+	let g:LanguageClient_serverCommands = get(g:, 'LanguageClient_serverCommands', {})
+	let g:LanguageClient_serverCommands.python = ['pyls']
+	nm <buffer> <silent> <C-]> :call LanguageClient#textDocument_definition()<CR>
+	nn <buffer> <silent> K :call LanguageClient#textDocument_hover()<CR>
+	nn <buffer> <silent> <Leader>r :call LanguageClient#textDocument_references()<CR>
+	let settings = json_decode('
+	\{
+	\	"pyls": {
+	\		"plugins": {
+	\			"mccabe": {
+	\				"enabled": false
+	\			},
+	\			"pycodestyle": {
+	\				"enabled": false
+	\			},
+	\			"pydocstyle": {
+	\				"enabled": false
+	\			},
+	\			"pyflakes": {
+	\				"enabled": false
+	\			},
+	\			"pylint": {
+	\				"enabled": false
+	\			}
+	\		}
+	\	}
+	\}')
+	augroup LanguageClient_config
+	    autocmd!
+	    autocmd User LanguageClientStarted call LanguageClient#Notify(
+		\ 'workspace/didChangeConfiguration', {'settings': settings})
+	augroup END
 endif
 ```
