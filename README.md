@@ -3,16 +3,16 @@ Required packages: `git`, `curl`
 
 ```sh
 command -v curl \
-	&& curl -L https://github.com/neovim/neovim/releases/download/stable/nvim.appimage --create-dirs -o "$HOME/.local/bin/nvim" \
-	&& chmod u+x "$HOME/.local/bin/nvim"
+  && curl -L https://github.com/neovim/neovim/releases/download/stable/nvim.appimage --create-dirs -o "$HOME/.local/bin/nvim" \
+  && chmod u+x "$HOME/.local/bin/nvim"
 command -v pip && pip install -U --user pynvim
 command -v pip3 && pip3 install -U --user pynvim
 command -v git \
-	&& git config --global core.editor nvim \
-	&& git config --global diff.tool "nvim -d" \
-	&& rm -rf "$HOME/.config/nvim" \
-		&& git clone https://github.com/avimmer/dotvim "$HOME/.config/nvim" \
-		&& command -v nvim && nvim +PlugInstall +qa
+  && git config --global core.editor nvim \
+  && git config --global diff.tool "nvim -d" \
+  && rm -rf "$HOME/.config/nvim" \
+    && git clone https://github.com/avimmer/dotvim "$HOME/.config/nvim" \
+    && command -v nvim && nvim +PlugInstall +qa
 
 ```
 
