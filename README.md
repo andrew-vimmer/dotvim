@@ -1,5 +1,5 @@
 # Installation
-Required packages: `git`, `curl`, `python-pip3`
+Required packages: `git`, `curl`, `python3-pip`
 
 ```sh
 curl -L https://github.com/neovim/neovim/releases/download/stable/nvim.appimage \
