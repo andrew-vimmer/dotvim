@@ -1,12 +1,11 @@
 # Installation
-Required packages: `git`, `curl`
+Required packages: `git`, `curl`, `python-pip3`
 
 ```sh
 curl -L https://github.com/neovim/neovim/releases/download/stable/nvim.appimage \
   --create-dirs -o "$HOME/.local/bin/nvim" \
   && chmod u+x "$HOME/.local/bin/nvim"
-command -v pip3 && pip3 install -U --user pynvim
-command -v git \
+pip3 install -U --user pynvim \
   && git config --global core.editor nvim \
   && git config --global diff.tool "nvim -d" \
   && rm -rf "$HOME/.config/nvim" \
