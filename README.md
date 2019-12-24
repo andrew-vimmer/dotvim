@@ -2,8 +2,8 @@
 Required packages: `git`, `curl`
 
 ```sh
-command -v curl \
-  && curl -L https://github.com/neovim/neovim/releases/download/stable/nvim.appimage --create-dirs -o "$HOME/.local/bin/nvim" \
+curl -L https://github.com/neovim/neovim/releases/download/stable/nvim.appimage \
+  --create-dirs -o "$HOME/.local/bin/nvim" \
   && chmod u+x "$HOME/.local/bin/nvim"
 command -v pip3 && pip3 install -U --user pynvim
 command -v git \
