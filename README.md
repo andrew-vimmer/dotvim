@@ -24,7 +24,7 @@ if &ft ==# 'go'
   let g:ale_linters = get(g:, 'ale_linters', {})
   let g:ale_linters.go = ['gobuild']
   let g:LanguageClient_serverCommands = get(g:, 'LanguageClient_serverCommands', {})
-  let g:LanguageClient_serverCommands.go = ['go-langserver', '-gocodecompletion']
+  let g:LanguageClient_serverCommands.go = ['gopls', 'serve']
   nm <buffer> <silent> <C-]> :call LanguageClient#textDocument_definition()<CR>
   nn <buffer> <silent> K :call LanguageClient#textDocument_hover()<CR>
   nn <buffer> <silent> <Leader>r :call LanguageClient#textDocument_references()<CR>
