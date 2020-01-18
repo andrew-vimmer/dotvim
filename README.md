@@ -10,7 +10,7 @@ pip3 install -U --user pynvim \
   && git config --global diff.tool "nvim -d" \
   && rm -rf "$HOME/.config/nvim" \
     && git clone https://github.com/avimmer/dotvim "$HOME/.config/nvim" \
-    && command -v nvim && nvim +PlugInstall +qa
+    && nvim +PlugInstall +qa
 
 ```
 
