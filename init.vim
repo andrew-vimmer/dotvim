@@ -15,7 +15,7 @@ call plug#end()
 
 set fillchars=vert:\ ,eob:\ ,diff:\  listchars=tab:‧\ ,eol:¬
 set mouse=a
-set statusline=%f\ %m%w
+set statusline=%f\ %m
 set termguicolors
 colorscheme solarized8_flat
 
