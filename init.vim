@@ -24,7 +24,6 @@ nnoremap <expr> gp '`['.strpart(getregtype(), 0, 1).'`]'
 let g:localvimrc_persistent = 1
 let g:localvimrc_sandbox = 0
 
-let g:grepper = {'tools': ['rg', 'grep']}
 nmap gs <Plug>(GrepperOperator)
 xmap gs <Plug>(GrepperOperator)
 
