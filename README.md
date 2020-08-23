@@ -2,7 +2,7 @@
 Required packages: `git`, `curl`, `python3-pip`
 
 ```sh
-curl -L https://github.com/neovim/neovim/releases/download/stable/nvim.appimage \
+curl -fL https://github.com/neovim/neovim/releases/download/stable/nvim.appimage \
   --create-dirs -o "$HOME/.local/bin/nvim" \
   && chmod u+x "$HOME/.local/bin/nvim"
 pip3 install -U --user pynvim \
