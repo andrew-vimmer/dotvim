@@ -5,7 +5,6 @@ Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
 Plug 'dense-analysis/ale'
 Plug 'embear/vim-localvimrc'
-Plug 'lifepillar/vim-solarized8'
 Plug 'mhinz/vim-grepper'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'tbodt/deoplete-tabnine', {'do': 'bash install.sh'}
@@ -16,8 +15,6 @@ call plug#end()
 set fillchars=vert:\ ,eob:\ ,diff:\  listchars=tab:‧\ ,eol:¬
 set mouse=a
 set statusline=%f\ %m
-set termguicolors
-colorscheme solarized8_flat
 
 let g:localvimrc_persistent = 1
 let g:localvimrc_sandbox = 0
