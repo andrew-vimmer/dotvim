@@ -13,3 +13,5 @@ curl -fL https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
     && nvim +PlugInstall +qa
 
 ```
+## Foo
+How's the editing?
