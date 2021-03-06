@@ -20,7 +20,8 @@ if &ft ==# 'go'
   setl noet ts=8 sw=8
   let g:ale_lint_on_text_changed = 'never'
   let b:ale_linters = {'go': ['gobuild']}
-  autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
+  au BufWritePre <buffer> :silent call CocAction('format')
+  au BufWritePre <buffer> :silent call CocAction('runCommand', 'editor.action.organizeImport')
   nm <buffer> <silent> <C-]> :call CocAction('jumpDefinition')<CR>
   nn <buffer> <silent> K :call CocAction('doHover')<CR>
   nn <buffer> <silent> <Leader>r :call CocAction('jumpReferences')<CR>
