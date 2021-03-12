@@ -16,11 +16,3 @@ set statusline=%f\ %m
 
 let g:localvimrc_persistent = 1
 let g:localvimrc_sandbox = 0
-
-nmap gs <Plug>(GrepperOperator)
-xmap gs <Plug>(GrepperOperator)
-
-augroup vimrc
-	autocmd!
-	autocmd BufRead *.git/COMMIT_EDITMSG setlocal spell
-augroup END
