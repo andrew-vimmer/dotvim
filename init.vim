@@ -10,9 +10,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-vinegar'
 call plug#end()
 
+let g:localvimrc_persistent = 1
+let g:localvimrc_sandbox = 0
+
 set fillchars=vert:\ ,eob:\ ,diff:\  listchars=tab:‧\ ,eol:¬
 set mouse=a
 set statusline=%f\ %m
-
-let g:localvimrc_persistent = 1
-let g:localvimrc_sandbox = 0
