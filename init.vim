@@ -13,6 +13,7 @@ call plug#end()
 let g:localvimrc_persistent = 1
 let g:localvimrc_sandbox = 0
 
+set clipboard=unnamedplus
 set fillchars=vert:\ ,eob:\ ,diff:\  listchars=tab:‧\ ,eol:¬
 set mouse=a
 set statusline=%f\ %m
