@@ -8,7 +8,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-vinegar'
 call plug#end()
 
-let g:localvimrc_persistent = 1
+let g:localvimrc_persistent = 2
 let g:localvimrc_sandbox = 0
 
 set clipboard=unnamedplus
