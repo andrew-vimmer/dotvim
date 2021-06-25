@@ -1,5 +1,3 @@
-scriptencoding utf-8
-
 call plug#begin()
 Plug 'dense-analysis/ale'
 Plug 'embear/vim-localvimrc'
