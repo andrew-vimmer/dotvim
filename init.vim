@@ -1,7 +1,6 @@
 call plug#begin()
 Plug 'dense-analysis/ale'
 Plug 'embear/vim-localvimrc'
-Plug 'mhinz/vim-grepper'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
